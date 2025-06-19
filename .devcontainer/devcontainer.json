@@ -10,7 +10,7 @@
     "forwardPorts": [4000],
 
     // Uncomment the next line to run commands after the container is created.
-    "postCreateCommand": "jekyll serve"
+    // "postCreateCommand": "jekyll serve"
 
     // Configure tool-specific properties.
     // "customizations": {},
