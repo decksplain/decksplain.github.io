@@ -53,6 +53,7 @@ th, td {
 
 .card {
     position: relative;
+    min-width: calc(2.5in * var(--scale-up));
     width: calc(2.5in * var(--scale-up));
     height: calc(3.5in * var(--scale-up));
     border: 1px solid #333;
@@ -65,17 +66,28 @@ th, td {
     font-family: sans-serif;
 
     @media print {
+        min-width: 2.5in * var(--scale-up);
         width: 2.5in;
         height: 3.5in;
     }
+
+    header {
+        display: flex;
+        float:left;
+        width: calc(100% - 8em);
+
+        .card-info {
+            margin-left: auto;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .qr-code {
+        width: 7rem;
+        float: right;
+    }
 }
 
-.card-info {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-}
-
-.card-info p {
-    margin: 0;
-}
