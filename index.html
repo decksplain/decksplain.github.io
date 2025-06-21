@@ -1,19 +1,8 @@
 ---
 layout: default
 ---
-{% for game in site.games %}
-  <section class="card">
-    <a href="{{ game.url }}">
-      <h1>{{ game.title }}</h1>
-    </a>
-    <div class="info">
-      <p>
-        👥 {{ game.players }} players
-      </p>
-      <p>
-        ⏳ {{ game.round-time }}
-      </p>
-    </div>
-    {{ game.content | markdownify }}
-  </section>
-{% endfor %}
+<div class="card-container">
+  {% for game in site.games %}
+    {% include card.html game=game %}
+  {% endfor %}
+</div>"

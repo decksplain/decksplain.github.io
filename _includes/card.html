@@ -1,0 +1,14 @@
+<section class="card">
+    <a href="{{ game.url }}">
+    <h1>{{ include.game.title }}</h1>
+    </a>
+    <div class="card-info">
+    <p>
+        👥 {{ include.game.players }} players
+    </p>
+    <p>
+        ⏳ {{ include.game.round-time }}
+    </p>
+    </div>
+    {{ include.game.content | markdownify }}
+</section>

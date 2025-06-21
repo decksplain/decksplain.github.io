@@ -1,44 +1,25 @@
-.card {
-    position: relative;
-    width: 2.5in;
-    height: 3.5in;
-    border: 1px solid #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem;
-    box-sizing: border-box;
-    font-family: sans-serif;
+:root {
+    --scale-up: 2.66;
 }
 
-.card .info {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-}
+* {
+    font-size: calc(6px * var(--scale-up));
 
-.card .info p {
-    margin: 0;
+    @media print {
+        font-size: 6px;
+    }
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
 }
 
-* {
-    font-size: 6px;
-}
-
 h1 {
     font-size: 2rem;
     margin-top: 0rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 p {
@@ -61,4 +42,40 @@ table {
 
 th, td {
     padding: 0.5rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: calc(2.5in * var(--scale-up));
+    height: calc(3.5in * var(--scale-up));
+    border: 1px solid #333;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+    @media print {
+        width: 2.5in;
+        height: 3.5in;
+    }
+}
+
+.card-info {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.card-info p {
+    margin: 0;
 }
