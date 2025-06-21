@@ -13,16 +13,16 @@ round-time: 5 minutes
 
 **Setup:**
 
-- Discard jokers
-- Each player get 4 face down cards, peek (and memorise!) at two of them
-- Remaining cards are placed face down, take the top card and place it face up in the discard pile
+1. Discard Jokers
+2. Each player get 4 face down cards, place them in a grid, peek at two of them
+3. Remaining cards are placed face down, take the top card and place it face up in the discard pile
 
 **Take your turn**, either:
 
-- Draw from the face down pile
+- Draw from the face down pile and peak at it
   - If it’s a power card, you can use it (discard after)
-  - Or replace a card from your face down cards
-- Pick a card from the discard pile and place one of your own cards on the discard pile
+  - Or exchange with a card from your face down cards
+- Draw the top card from the discard pile and exchange with a card from yoru face down cards
 - Call Cabo if you think you can win, everyone else will get one more turn
 
 **Discarding cards:** When a card is discarded, you can match a face down card from anyone’s pile to discard it too
@@ -31,10 +31,12 @@ round-time: 5 minutes
 - If you discard a card from someone else’s cards, you can then give them one of your cards
 - If you reveal a card which does not match, you must take a penalty card
 
+**Power cards:**
+
 | Card          | Power | Effect                                       |
 |---------------|-------|----------------------------------------------|
 | 7 - 8         | Peek  | Look at one of your own cards                |
 | 9 - 10        | Spy   | Look at one opponent’s card                  |
 | Jack or Queen | Swap  | Swap one of your cards with another player’s |
 
-**Scoring:** Ace = 1, 2 - 10 = face value, Jack = 11, Queen = 12, King = 13, Red King = 0, Jokers are discarded
+**Scoring:** Calling Cabo and winning = -3 points (total!), Calling Cabo and losing = card points + 10 points, Ace = 1, 2 - 10 = face value, Jack = 11, Queen = 12, King = 13, Red King = 0

@@ -5,12 +5,12 @@ players: 2 - 6
 round-time: 15 - 30 minutes
 ---
 
-**Objective:** Be the first player to use all your cards and have the lowest points left in your hand.
+**Objective:** Be the first player to use all your cards and have the lowest points left in your hand
 
 **Setup:**
 
 - Each player gets 7 cards
-- Remaining cards are placed face down, take the top card and place it face up in the discard pile
+- Remaining cards are placed face down
 
 **Take your turn**, either:
 
