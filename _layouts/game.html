@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<section class="card">
+  <h1>{{ page.title }}</h1>
+  <div class="info">
+    <p>
+      👥 {{ page.players }} players
+    </p>
+    <p>
+      ⏳ {{ page.round-time }}
+    </p>
+  </div>
+  {{ page.content | markdownify }}
+</section>

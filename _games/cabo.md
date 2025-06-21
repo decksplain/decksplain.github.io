@@ -1,4 +1,5 @@
 ---
+layout: game
 title: Cabo
 players: 2 - 4
 round-time: 5 minutes
@@ -12,7 +13,8 @@ round-time: 5 minutes
 
 **Setup:**
 
-- Each player get 4 face down cards, peek at two of them
+- Discard jokers
+- Each player get 4 face down cards, peek (and memorise!) at two of them
 - Remaining cards are placed face down, take the top card and place it face up in the discard pile
 
 **Take your turn**, either:

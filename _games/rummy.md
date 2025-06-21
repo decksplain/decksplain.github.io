@@ -1,4 +1,5 @@
 ---
+layout: game
 title: Rummy
 players: 2 - 6
 round-time: 15 - 30 minutes

@@ -1,27 +1,19 @@
 ---
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Website</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  {% for game in site.games %}
-    <section class="card">
+{% for game in site.games %}
+  <section class="card">
+    <a href="{{ game.url }}">
       <h1>{{ game.title }}</h1>
-      <div class="info">
-        <p>
-          👥 {{ game.players }} players
-        </p>
-        <p>
-          ⏳ {{ game.round-time }}
-        </p>
-      </div>
-      {{ game.content | markdownify }}
-    </section>
-  {% endfor %}
-</body>
-</html>
+    </a>
+    <div class="info">
+      <p>
+        👥 {{ game.players }} players
+      </p>
+      <p>
+        ⏳ {{ game.round-time }}
+      </p>
+    </div>
+    {{ game.content | markdownify }}
+  </section>
+{% endfor %}
