@@ -8,6 +8,6 @@
             <p>⏳ {{ include.game.round-time }}</p>
         </div>
     </header>
-    {% qr {{site.url}}{{ site.baseurl }}{{ include.game.url }} %}
+    {% qr {{ site.url }}{{ site.baseurl }}{{ include.game.url }} %}
     {{ include.game.content | markdownify }}
 </section>
