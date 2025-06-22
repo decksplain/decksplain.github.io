@@ -6,11 +6,10 @@
 }
 
 .card {
-    background-color: red;
     position: relative;
-    min-width: calc(2.5in * var(--scale-up));
-    width: calc(2.5in * var(--scale-up));
-    height: calc(3.5in * var(--scale-up));
+    // min-width: calc(2.5in * var(--scale-up));
+    width: 100%;
+    min-height: calc(3.5in * var(--scale-up));
     border: 1px solid #333;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -21,9 +20,14 @@
     font-family: sans-serif;
 
     @media print {
-        min-width: 2.5in;
         width: 2.5in;
+        min-height: auto;
         height: 3.5in;
+    }
+
+    @include tablet {
+        width: calc(2.5in * var(--scale-up));
+        height: calc(3.5in * var(--scale-up));
     }
 
     header {
@@ -43,5 +47,6 @@
     .qr-code {
         width: 7rem;
         float: right;
+        margin-bottom: 1rem;
     }
 }
