@@ -1,5 +1,4 @@
 <section class="card">
-    <!-- {% qr include.game.url %} -->
     <header>
         <a href="{{ site.baseurl }}{{ include.game.url }}">
             <h1>{{ include.game.title }}</h1>
@@ -9,6 +8,6 @@
             <p>⏳ {{ include.game.round-time }}</p>
         </div>
     </header>
-    {% qr {{site.url}}{{ include.game.url }} %}
+    {% qr {{site.url}}{{ site.baseurl }}{{ include.game.url }} %}
     {{ include.game.content | markdownify }}
 </section>
