@@ -1,0 +1,47 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: red;
+    position: relative;
+    min-width: calc(2.5in * var(--scale-up));
+    width: calc(2.5in * var(--scale-up));
+    height: calc(3.5in * var(--scale-up));
+    border: 1px solid #333;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+    @media print {
+        min-width: 2.5in;
+        width: 2.5in;
+        height: 3.5in;
+    }
+
+    header {
+        display: flex;
+        float:left;
+        width: calc(100% - 8em);
+
+        .card-info {
+            margin-left: auto;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .qr-code {
+        width: 7rem;
+        float: right;
+    }
+}
