@@ -79,5 +79,8 @@ DEPENDENCIES
   jekyll (= 4.3.4)
   rqrcode (= 3.1)
 
+RUBY VERSION
+   ruby 3.3.5p100
+
 BUNDLED WITH
    2.5.21
