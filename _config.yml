@@ -1,5 +1,5 @@
 permalink: pretty
-siteurl: "https://harvzor.github.io"
+url: "https://harvzor.github.io"
 baseurl: "/card-game-rules"
 collections:
   games:
