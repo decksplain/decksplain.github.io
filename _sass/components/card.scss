@@ -19,7 +19,7 @@
     box-sizing: border-box;
     font-family: sans-serif;
 
-    @media print {
+    @include print {
         width: 2.5in;
         min-height: auto;
         height: 3.5in;

@@ -3,3 +3,13 @@
     @content;
   }
 }
+
+@mixin print {
+  @media print {
+      @content;
+  }
+
+  .print & {
+      @content;
+  }
+}
