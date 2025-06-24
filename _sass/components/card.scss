@@ -33,7 +33,14 @@
     header {
         display: flex;
         float:left;
-        width: calc(100% - 8em);
+        width: calc(100% - 6em);
+        border-bottom: 1px solid black;
+        margin-bottom: var(--text-margin);
+        
+        a {
+            color: black;
+            text-decoration: none;
+        }
 
         .card-info {
             margin-left: auto;
@@ -45,7 +52,7 @@
     }
 
     .qr-code {
-        width: 7rem;
+        width: 5rem;
         float: right;
         margin-bottom: 1rem;
     }

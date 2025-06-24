@@ -5,31 +5,27 @@ players: 2 - 4
 round-time: 5 minutes
 ---
 
-🃏🃏
-<br/>
-🃏🃏
-
 **Objective:** End the game with the **lowest score**
 
 **Setup:**
 
 1. Discard Jokers
-2. Each player get 4 face down cards, place them in a grid, peek at two of them
-3. Remaining cards are placed face down, take the top card and place it face up in the discard pile
+2. Each player gets 4 face-down cards in a grid; peek at 2
+3. Place remaining deck face down, start discard pile with top card face up
 
 **Take your turn**, either:
 
-- Draw from the face down pile and peak at it
+- Draw from deck and peak at the card:
   - If it’s a power card, you can use it (discard after)
   - Or exchange with a card from your face down cards
-- Draw the top card from the discard pile and exchange with a card from yoru face down cards
-- Call Cabo if you think you can win, everyone else will get one more turn
+- Draw the top card from the discard pile and exchange with a card from your face down cards
+- Call Cabo to end the game after others get one more turn
 
 **Discarding cards:** When a card is discarded, you can match a face down card from anyone’s pile to discard it too
 
-- Discarding a card from yours will mean you have one less card, so less points!
-- If you discard a card from someone else’s cards, you can then give them one of your cards
-- If you reveal a card which does not match, you must take a penalty card
+- If from your own pile → fewer cards = fewer points
+- If from another's pile → give them one of your cards
+- Wrong match = take a penalty card
 
 **Power cards:**
 
