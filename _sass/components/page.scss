@@ -1,0 +1,39 @@
+.page-container {
+    max-width: 1600px;
+    margin: auto;
+    padding: 0 1rem;
+
+    @include desktop {
+        padding: 0;
+    }
+}
+
+.page-header-container {
+    background-color: #0a0a0a;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    nav {
+        align-self: center;
+    }
+}
+
+.page-main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #111111;
+}

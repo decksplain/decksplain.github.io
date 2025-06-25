@@ -1,8 +1,10 @@
 .card-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+
+    @include print {
+        justify-content: center;
+    }
 }
 
 .card {
@@ -15,19 +17,25 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: white;
     padding: 1rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
     box-sizing: border-box;
-    font-family: sans-serif;
+    overflow: hidden;
 
     @include print {
         width: 2.5in;
         min-height: auto;
         height: 3.5in;
+        margin: 1rem;
     }
 
     @include tablet {
         width: calc(2.5in * var(--scale-up));
         height: calc(3.5in * var(--scale-up));
+    }
+
+    @include desktop {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     header {

@@ -24,7 +24,8 @@ html {
 
 body {
     margin: 0;
-    background-color: #f0f0f0;
+    font-family: Georgia, serif;
+
 
     // @include print {
     //     width: 21cm;
@@ -67,3 +68,4 @@ th, td {
 }
 
 @import "components/card";
+@import "components/page";
