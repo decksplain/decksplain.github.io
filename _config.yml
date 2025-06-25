@@ -1,5 +1,8 @@
 permalink: pretty
 url: "https://harvzor.github.io"
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   games:
     output: true

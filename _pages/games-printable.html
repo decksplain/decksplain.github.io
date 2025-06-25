@@ -1,0 +1,9 @@
+---
+layout: default
+isPrint: true
+---
+<div class="card-container">
+  {% for game in site.games %}
+    {% include card.html game=game %}
+  {% endfor %}
+</div>
