@@ -5,6 +5,8 @@ players: 2 - 4
 round-time: 5 minutes
 ---
 
+<!-- Original rules? https://web.archive.org/web/20160303232751/http://www.playcabo.com/instructions.html -->
+
 **Objective:** End the game with the **lowest score**
 
 **Setup:**
@@ -35,4 +37,4 @@ round-time: 5 minutes
 | 9 - 10        | Spy   | Look at one opponent’s card                  |
 | Jack or Queen | Swap  | Swap one of your cards with another player’s |
 
-**Scoring:** Calling Cabo and winning = -3 points (total!), Calling Cabo and losing = card points + 10 points, Ace = 1, 2 - 10 = face value, Jack = 11, Queen = 12, King = 13, Red King = 0
+**Scoring:** Calling Cabo and winning = 0 points (total!), Calling Cabo and losing = card points + 5 points, Ace = 1, 2 - 10 = face value, Jack = 11, Queen = 12, King = 13, Red King = 0
