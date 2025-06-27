@@ -29,8 +29,7 @@ class QR < Liquid::Tag
   def render(context)
     resolved_text = Liquid::Template.parse(@text.strip).render(context)
     qr = RQRCode::QRCode.new(resolved_text, **RQRCODE_OPTIONS)
-    qr_svg = ERB::Util.url_encode(qr.as_svg(**RQRCODE_SVG_OPTIONS).to_s)
-    "<img class=\"qr-code\" src=\"data:image/svg+xml;utf8,#{qr_svg}\">"
+    qr.as_svg(**RQRCODE_SVG_OPTIONS).to_s
   end
 
   Liquid::Template.register_tag 'qr', self

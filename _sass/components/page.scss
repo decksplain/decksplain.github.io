@@ -1,5 +1,5 @@
 .page-container {
-    max-width: 1300px;
+    max-width: calc(1300px + 1rem);
     margin: auto;
     padding: 0 1rem;
 
@@ -8,9 +8,8 @@
     }
 }
 
-.page-header-container {
-    background-color: #FCAB64;
-}
+// .page-header-container {
+// }
 
 .page-header {
     display: flex;
@@ -19,7 +18,7 @@
     padding-bottom: 1rem;
 
     a {
-        color: white;
+        color: var(--colour-primary);
         text-decoration: none;
     }
 
@@ -32,9 +31,8 @@
     }
 }
 
-.page-main {
-    background-color: #FCD29F;
-}
+// .page-main {
+// }
 
 .paragraph-centered {
     text-align: center;

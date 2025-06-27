@@ -8,14 +8,18 @@
 :root {
     --scale-up: 2.66;
     --text-margin: 0.3rem;
+    --colour-primary: #01284c;
+    --colour-secondary: #f8f1e1;
 }
 
 html {
     box-sizing: border-box;
     font-size: calc(8px * var(--scale-up));
+    color: var(--colour-primary);
 
     @include print {
         font-size: 8px;
+        color: black;
     }
 
     &.print {
@@ -30,12 +34,13 @@ html {
 body {
     margin: 0;
     font-family: Georgia, serif;
-
+    background-color: var(--colour-secondary);
 
     .print & {
         width: 21cm;
         height: 29.7cm;
         margin: auto;
+        background-color: white;
     }
 }
 
@@ -59,7 +64,7 @@ ul, ol {
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid var(--colour-primary);
     border-collapse: collapse;
     text-align: left;
 }
