@@ -5,11 +5,17 @@
     size: A4 landscape;
 }
 
-:root {
+// Variables in html so it can be combined with the .print
+html {
     --scale-up: 2.66;
     --text-margin: 0.3rem;
     --colour-primary: #01284c;
     --colour-secondary: #f8f1e1;
+
+    @include print {
+        --colour-primary: black;
+        --colour-secondary: white;
+    }
 }
 
 html {
@@ -18,11 +24,6 @@ html {
     color: var(--colour-primary);
 
     @include print {
-        font-size: 8px;
-        color: black;
-    }
-
-    &.print {
         font-size: 8px;
     }
 }
@@ -36,11 +37,10 @@ body {
     font-family: Georgia, serif;
     background-color: var(--colour-secondary);
 
-    .print & {
+    @include print {
         width: 21cm;
         height: 29.7cm;
         margin: auto;
-        background-color: white;
     }
 }
 
