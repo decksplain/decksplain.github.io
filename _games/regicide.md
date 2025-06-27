@@ -18,7 +18,7 @@ round-time:
 
 **Steps:**
 
-1. Play a card or yield
+1. Play a card or skip your turn
 2. Activate the suit power
 3. Deal damage to the enemy and check
 4. Suffer damage from the enemy
@@ -33,10 +33,10 @@ round-time:
 
 **Suits:**
 
-- Hearts - Heal from the discard
-- Diamonds - Draw cards
-- Clubs - Double damage
-- Spades - Shield against enemy attack
-- Jesters - Negates immunity of enemey
+- **Hearts** heal - discarded cards go to the draw pile
+- **Diamonds** draw to the hand
+- **Clubs** deal double damage
+- **Spades** shield against enemy attack
+- **Jesters** negates immunity of enemey
 
 More rules: [https://www.regicidegame.com/how-to-play/](https://www.regicidegame.com/how-to-play/)

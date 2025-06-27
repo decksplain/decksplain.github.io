@@ -2,7 +2,10 @@
 layout: page
 permalink: /
 ---
-<div class="card-container">
+<section class="paragraph-centered">
+  <p>Concise rule summaries for classic 54-card games, each designed to fit on a single card. Ideal for new players following along while explains the rules in detail. Simple, clear, and always on hand.</p>
+</section>
+<section class="card-container">
   {% for game in site.games %}
     {% include card.html game=game %}
   {% endfor %}

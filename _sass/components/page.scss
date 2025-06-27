@@ -1,5 +1,5 @@
 .page-container {
-    max-width: 1600px;
+    max-width: 1300px;
     margin: auto;
     padding: 0 1rem;
 
@@ -9,7 +9,7 @@
 }
 
 .page-header-container {
-    background-color: #0a0a0a;
+    background-color: #FCAB64;
 }
 
 .page-header {
@@ -33,7 +33,16 @@
 }
 
 .page-main {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: #111111;
+    background-color: #FCD29F;
+}
+
+.paragraph-centered {
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @include desktop {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }

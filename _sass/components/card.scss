@@ -1,6 +1,7 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @include print {
         justify-content: center;
@@ -12,7 +13,6 @@
     // min-width: calc(2.5in * var(--scale-up));
     width: 100%;
     min-height: calc(3.5in * var(--scale-up));
-    border: 1px solid #333;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     background-color: white;
@@ -26,16 +26,12 @@
         min-height: auto;
         height: 3.5in;
         margin: 1rem;
+        border: 1px solid #333;
     }
 
     @include tablet {
         width: calc(2.5in * var(--scale-up));
         height: calc(3.5in * var(--scale-up));
-    }
-
-    @include desktop {
-        margin-left: 1rem;
-        margin-right: 1rem;
     }
 
     header {

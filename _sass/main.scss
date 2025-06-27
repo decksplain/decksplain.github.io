@@ -2,7 +2,7 @@
 @import "normalize";
 
 @page {
-    size: landscape;
+    size: A4 landscape;
 }
 
 :root {
@@ -11,6 +11,7 @@
 }
 
 html {
+    box-sizing: border-box;
     font-size: calc(8px * var(--scale-up));
 
     @include print {
@@ -22,16 +23,20 @@ html {
     }
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
     margin: 0;
     font-family: Georgia, serif;
 
 
-    // @include print {
-    //     width: 21cm;
-    //     height: 29.7cm;
-    //     margin: auto;
-    // }
+    .print & {
+        width: 21cm;
+        height: 29.7cm;
+        margin: auto;
+    }
 }
 
 h1 {
