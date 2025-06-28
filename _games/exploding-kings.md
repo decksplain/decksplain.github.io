@@ -20,6 +20,8 @@ round-time: 10 minutes
 - End your turn by picking up a card
 - If you pickup a King, you must Defuse or lose
 
+<!--split-->
+
 **Cards:**
 
 | Card        | Power          | Effect                                                                                                          |

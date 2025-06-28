@@ -9,13 +9,14 @@ round-time: 15 - 30 minutes
 
 **Setup:**
 
-- Each player gets 7 cards
-- Remaining cards are placed face down
+1. Discard Jokers
+2. Each player gets 7 cards
+3. Remaining cards are placed face down
 
 **Take your turn**, either:
 
 - Draw one card from either the stock pile
-- Or use a card from your hand  to add to a set or run on the table
+- Use a card from your hand to add to a set or run on the table
 
 **Using cards:**
 
@@ -28,4 +29,4 @@ round-time: 15 - 30 minutes
 - The round ends when a player discards their last card
 - Other players then count the points in their remaining hands
 
-**Scoring:** Ace = 1, 2 - 10 = face value, Face cards = 10, Jokers are discarded
+**Scoring:** Ace = 1, 2 - 10 = face value, Face cards = 10

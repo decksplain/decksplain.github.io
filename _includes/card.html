@@ -1,3 +1,4 @@
+{% assign parts = include.game.content | split: '<!--split-->' %}
 <section class="card">
     <header>
         <a href="{{ site.url }}{{ site.baseurl }}{{ include.game.url }}">
@@ -9,5 +10,8 @@
         </div>
     </header>
     {% qr {{ site.url }}{{ site.baseurl }}{{ include.game.url }} %}
-    {{ include.game.content | markdownify }}
+    {{ parts[0] | markdownify }}
+</section>
+<section class="card">
+    {{ parts[1] | markdownify }}
 </section>
