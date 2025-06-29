@@ -7,7 +7,7 @@
 
 // Variables in html so it can be combined with the .print
 html {
-    --scale-up: 2.66;
+    --scale-up: 2;
     --text-margin: 0.3rem;
     --colour-primary: #01284c;
     --colour-secondary: #f8f1e1;
@@ -15,6 +15,11 @@ html {
     @include print {
         --colour-primary: black;
         --colour-secondary: white;
+        --scale-up: 1;
+    }
+
+    @include tablet {
+        --scale-up: 2.66;
     }
 }
 
@@ -22,10 +27,6 @@ html {
     box-sizing: border-box;
     font-size: calc(8px * var(--scale-up));
     color: var(--colour-primary);
-
-    @include print {
-        font-size: 8px;
-    }
 }
 
 *, *::before, *::after {
@@ -45,6 +46,10 @@ body {
 }
 
 h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
     font-size: 2rem;
     margin-top: 0rem;
     margin-bottom: var(--text-margin);

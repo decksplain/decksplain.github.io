@@ -14,6 +14,7 @@
     position: relative;
     width: 100%;
     min-height: calc(3.5in * var(--scale-up));
+    width: calc(2.5in * var(--scale-up));
     border-radius: 1rem;
     border: var(--border-width) solid var(--colour-primary);
     background-color: var(--colour-secondary);
@@ -31,7 +32,6 @@
     }
 
     @include tablet {
-        width: calc(2.5in * var(--scale-up));
         height: calc(3.5in * var(--scale-up));
     }
 
