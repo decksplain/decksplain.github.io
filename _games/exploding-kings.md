@@ -11,7 +11,8 @@ round-time: 10 minutes
 
 1. Discard Jacks and Queens
 2. Each player gets an Ace or Joker and 6 random cards
-3. Shuffle Kings and extra Aces/Jokers into the deck
+3. Count the number of players, shuffle the same number of Kings into the deck minus 1
+3. Shuffle extra Aces/Jokers into the deck
 4. Place the remaining (shuffled) deck face down
 
 **Take your turn**:
@@ -20,15 +21,22 @@ round-time: 10 minutes
 - End your turn by picking up a card
 - If you pickup a King, you must Defuse or lose
 
+**Hints:**
+
+- Your cards help you avoid the Kings, play as many as you like
+- Running out of cards is fine, but now you're powerless to avoid the King
+- It's unlikely the King is on top of the deck, especially at the start of the game
+
 <!--split-->
 
 **Cards:**
 
 | Card        | Power          | Effect                                                                                                          |
 |-------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| Ace / Joker | Defuse         | Ace (or Joker) is an extra life! Defuse the King and place the King back where ever you like in the deck        |
-| 1 - 4       | None           | Useless unless used in identical pairs/trios or in a distinct quintet                                           |
-| 5           | Favour         | Force any other player to give you 1 card from their hand. They choose which card to give you                   |
+| King        | Bomb           | This kills you                                                                                                  |
+| Ace / Joker | Defuse         | Ace (or Joker) is an extra life! Defuse the King and place the King back whereever you like in the deck         |
+| 1 - 4       | None           | Useless unless used in a combo                                                                                  |
+| 5           | Favour         | Force another player to give you 1 card from their hand. They choose which card to give you                     |
 | 6           | Skip           | End (only!) one of your turns                                                                                   |
 | 7           | Shuffle        | Feeling lucky? Shuffle the deck                                                                                 |
 | 8           | See the future | The magic 8 ball allows you to view the top 3 cards from the deck                                               |

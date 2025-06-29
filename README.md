@@ -6,3 +6,7 @@
         - `--verbose` helps with seeing that changes have really been picked up
         - `--force_polling` seems to solve an issue (maybe with VSCode in dev containers?) where some files (such as scss files) aren't watched properly
 2. Visit the site at http://localhost:4000
+
+## Favicon
+
+https://svg2ico.com/ is a good website
