@@ -9,7 +9,8 @@
             <p>⏳ {{ include.game.round-time }}</p>
         </div>
     </header>
-    {% qr {{ site.url }}{{ site.baseurl }}{{ include.game.url }} %}
+    {% assign qr_url = site.url | append: site.baseurl | append: include.game.url %}
+    {% qr qr_url width:5rem; %}
     {{ parts[0] | markdownify }}
 </section>
 <section class="card">

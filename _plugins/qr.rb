@@ -14,22 +14,29 @@ class QR < Liquid::Tag
     level: :l
   }.freeze
 
-  RQRCODE_SVG_OPTIONS = {
-    viewbox: true,
-    # offset is rqrcode's default module size of 11px multiplied by
-    # the recommended 'quiet area' for a QR code of four modules
-    use_path: true
-  }.freeze
 
   def initialize(tag_name, text, tokens)
     super
-    @text = text
+    @qr_text, @style = text.strip.split(' ', 2)
   end
 
   def render(context)
-    resolved_text = Liquid::Template.parse(@text.strip).render(context)
+    # resolved_text = Liquid::Template.parse(@qr_text.strip).render(context)
+    resolved_text = context[@qr_text] || context.dig(*@qr_text.split('.'))
     qr = RQRCode::QRCode.new(resolved_text, **RQRCODE_OPTIONS)
-    qr.as_svg(**RQRCODE_SVG_OPTIONS).to_s
+
+    rqrcode_svg_options = {
+      viewbox: true,
+      # offset is rqrcode's default module size of 10px multiplied by
+      # the recommended 'quiet area' for a QR code of four modules
+      use_path: true
+    }
+
+    if @style
+      rqrcode_svg_options[:svg_attributes] = { style: @style }
+    end
+
+    qr.as_svg(rqrcode_svg_options).to_s
   end
 
   Liquid::Template.register_tag 'qr', self
