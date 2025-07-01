@@ -1,4 +1,5 @@
 {% assign parts = include.game.content | split: '<!--split-->' %}
+{% if include.print_front %}
 <section class="card">
     <header>
         <a href="{{ site.url }}{{ site.baseurl }}{{ include.game.url }}">
@@ -13,6 +14,9 @@
     {% qr qr_url width:5rem; %}
     {{ parts[0] | markdownify }}
 </section>
+{% endif %}
+{% if include.print_back %}
 <section class="card">
     {{ parts[1] | markdownify }}
 </section>
+{% endif %}

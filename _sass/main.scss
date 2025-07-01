@@ -87,5 +87,9 @@ hr {
     border-color: var(--colour-primary);
 }
 
+.page-break {
+    break-after: page;
+}
+
 @import "components/card";
 @import "components/page";
