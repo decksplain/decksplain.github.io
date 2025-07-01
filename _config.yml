@@ -6,3 +6,5 @@ collections:
     permalink: /:path/
   games:
     output: true
+exclude:
+- _games/drafts
