@@ -42,6 +42,6 @@ The order from high to low is:
 
 **Calculating card points:**
 
-| Card  | J | A  | 10 | J | Q | 9 | 8 | 7 |
+| Card  | J | A  | 10 | K | Q | 9 | 8 | 7 |
 |-------|---|----|----|---|---|---|---|---|
 | Value | 2 | 11 | 10 | 4 | 3 | 0 | 0 | 0 |

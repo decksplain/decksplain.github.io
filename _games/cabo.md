@@ -17,17 +17,18 @@ round-time: 5 minutes
 
 **Take your turn**, either:
 
-- Draw from deck and peak at the card:
+- Draw from the deck and peak at the card:
   - If it’s a power card, you can use it (discard after)
-  - Or exchange with a card from your face down cards
-- Draw the top card from the discard pile and exchange with a card from your face down cards
+  - Or exchange (see below)
+- Draw the top card from the discard pile and exchange (see below)
 - Call Cabo to end the game after others get one more turn
 
-**Discarding cards:** When a card is discarded, you can match a face down card from anyone’s pile to discard it too
+**Exchanging cards,** either:
 
-- If from your own pile → fewer cards = fewer points
-- If from another's pile → give them one of your cards
-- Wrong match = take a penalty card
+- exchange the new card for one of your face down cards
+- exchange the new card with matching multiples of your face down cards
+
+A failed matching requires picking up a penalty card.
 
 **Power cards:**
 
@@ -37,7 +38,7 @@ round-time: 5 minutes
 | 9 - 10        | Spy   | Look at one opponent’s card                  |
 | Jack or Queen | Swap  | Swap one of your cards with another player’s |
 
-**Scoring:** Calling Cabo and winning = 0 points (total!), Calling Cabo and losing = card points + 5 points, Ace = 1, 2 - 10 = face value, Jack = 11, Queen = 12, King = 13, Red King = 0
+**Scoring:** Lowest points = 0 points, Calling Cabo and losing = card points + 5 points, Ace = 1, 2 - 10 = face value, Jack = 11, Queen = 12, King = 13, Red King = 0
 
 <!--split-->
 
@@ -52,9 +53,15 @@ Based on the rules originally printed by Mandy Henning and Melissa Limes, adapte
 <!--
 Notable changes:
 - The original game has different cards for red and black kings so they could not be matched
-
-House rules:
-- Only calling Cabo can earn you 0 points, not having the lowest points
-- You can match opponents cards - this makes it into a potentially aggresive game of snap
-- Matching a card can be done out of turn
 -->
+
+**House rules:**
+
+Consider the following rules to spice up your game:
+
+- Black Kings can Spy and (optionally) Swap
+- Cards can be matched and discarded with any card that's discarded
+- Matches can also be done with opponents cards
+  - If you discard an opponents card, you may replace it with one of your own
+- Calling Cabo and winning awards you -3 points
+
