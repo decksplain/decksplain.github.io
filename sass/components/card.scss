@@ -1,0 +1,70 @@
+@use "../mixins";
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem;
+
+    @include mixins.print {
+        justify-content: center;
+    }
+}
+
+.card {
+    --border-width: 7px;
+
+    position: relative;
+    width: 100%;
+    min-height: calc(3.5in * var(--scale-up));
+    width: calc(2.5in * var(--scale-up));
+    border-radius: 1rem;
+    border: var(--border-width) solid var(--colour-primary);
+    background-color: var(--colour-secondary);
+    padding: calc(1rem - var(--border-width));
+    margin: 1rem;
+    overflow: hidden;
+
+    @include mixins.print {
+        width: 2.5in;
+        min-height: auto;
+        height: 3.5in;
+        padding: 1rem;
+        margin: 1rem;
+        border: 1px solid var(--colour-primary);
+    }
+
+    @include mixins.tablet {
+        height: calc(3.5in * var(--scale-up));
+    }
+
+    header {
+        display: flex;
+        float:left;
+        width: calc(100% - 6em);
+        border-bottom: 1px solid var(--colour-primary);
+        margin-bottom: var(--text-margin);
+        
+        a {
+            color: var(--colour-primary);
+            text-decoration: none;
+        }
+
+        .card-info {
+            margin-left: auto;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    svg {
+        // width: Inlined to improve loading.
+        float: right;
+        margin-bottom: 1rem;
+
+        path {
+            fill: var(--colour-primary);
+        }
+    }
+}

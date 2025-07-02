@@ -1,0 +1,20 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 17 | /     @include print {
+ * 18 | |         --colour-primary: black;
+ * 19 | |         --colour-secondary: white;
+ * 20 | |         --scale-up: 1;
+ * 21 | \     }
+ *    '
+ *   sass\main.scss 17:5  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 17 \2502  \250c      @include print {\a 18 \2502  \2502          --colour-primary: black;\a 19 \2502  \2502          --colour-secondary: white;\a 20 \2502  \2502          --scale-up: 1;\a 21 \2502  \2514      }\a    \2575 \a   sass\\main.scss 17:5  root stylesheet";
+}

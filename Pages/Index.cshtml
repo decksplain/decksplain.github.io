@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    Layout = "Shared/_Page";
+}
+<section class="paragraph-centered">
+    <p>Concise rule summaries for classic 54-card games, each designed to fit on a single card. Ideal for new players following along while explains the rules in detail. Simple, clear, and always on hand.</p>
+</section>
+<section class="card-container">
+    @foreach (Card game in Model.Cards)
+    {
+        @await Html.PartialAsync("~/Pages/Shared/Card.cshtml", game)
+    }
+</section>
