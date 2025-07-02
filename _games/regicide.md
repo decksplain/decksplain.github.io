@@ -1,8 +1,8 @@
 ---
 layout: game
 title: Regicide
-players: 
-round-time: 
+players: 1 - 4
+round-time: 5 - 20 minutes
 ---
 
 **Objective:** Kill the royal cards
@@ -18,9 +18,9 @@ round-time:
 
 **Steps:**
 
-1. Play a card or skip your turn
-2. Activate the suit power
-3. Deal damage to the enemy and check
+1. Play a card or skip your turn (yield)
+2. Activate the suit power (check immunity)
+3. Deal damage to the enemy
 4. Suffer damage from the enemy
 
 **Enemies:**
@@ -33,10 +33,30 @@ round-time:
 
 **Suits:**
 
-- **Hearts** heal - discarded cards go to the draw pile
-- **Diamonds** draw to the hand
-- **Clubs** deal double damage
-- **Spades** shield against enemy attack
-- **Jesters** negates immunity of enemey
+- **♥ Hearts** heal - discarded cards go to the draw pile
+- **♦ Diamonds** draw to the hand
+- **♣ Clubs** deal double damage
+- **♠ Spades** shield against enemy attack
+- **🂿 Jesters** negates immunity of enemey
 
 More rules: [https://www.regicidegame.com/how-to-play/](https://www.regicidegame.com/how-to-play/)
+
+<!--split-->
+
+Teaching the game in order:
+
+- [ ] The goal
+- [ ] Setup the game, explain max cards in the hand
+- [ ] Play 2 turns with just steps 1, 3 and 4
+- [ ] Yielding
+- [ ] Suits and introduce step 2, play for 2 more turns
+- [ ] Immunity
+- [ ] Aces (animal companions) and combos
+- [ ] Jester/Joker
+- [ ] What communication is not allowed
+
+Misc:
+
+- [ ] Dealing exact damage
+- [ ] Heart power before Diamond power
+- [ ] Drawing a defeated enemy

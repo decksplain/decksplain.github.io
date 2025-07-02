@@ -5,7 +5,7 @@ players: 2 - 6
 round-time: 15 - 30 minutes
 ---
 
-**Objective:** Be the first player to use all your cards and have the lowest points left in your hand
+**Objective:** Be the first player to use all your cards or have the lowest points left in your hand
 
 **Setup:**
 

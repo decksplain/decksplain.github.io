@@ -38,7 +38,7 @@ A failed matching requires picking up a penalty card.
 | 9 - 10        | Spy   | Look at one opponent’s card                  |
 | Jack or Queen | Swap  | Swap one of your cards with another player’s |
 
-**Scoring:** Lowest points = 0 points, Calling Cabo and losing = card points + 5 points, Ace = 1, 2 - 10 = face value, Jack = 11, Queen = 12, King = 13, Red King = 0
+**Scoring:** Lowest points = 0 points, Calling Cabo and losing = card points + 5 points, Ace = 1, 2 - 10 = face value, Jack = 11, Queen = 12, Black King = 13, Red King = 0
 
 <!--split-->
 
@@ -64,4 +64,3 @@ Consider the following rules to spice up your game:
 - Matches can also be done with opponents cards
   - If you discard an opponents card, you may replace it with one of your own
 - Calling Cabo and winning awards you -3 points
-

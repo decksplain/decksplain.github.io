@@ -1,11 +1,13 @@
 ---
 layout: game
-title: Officer's Skat (Suit game)
+title: Officer's Skat
 players: 2
 round-time: 10 minutes
 ---
 
 <!-- Rules from https://en.wikipedia.org/wiki/Officers%27_Skat -->
+
+Basic rules for a suit game
 
 **Objective:** Win each round with the best card, end the game with the **highest score**
 
@@ -33,10 +35,10 @@ round-time: 10 minutes
 
 The order from high to low is:
 
-1. Jacks in order: Clubs, Spades, Hearts, Diamonds
+1. Jacks in order: ♣ Clubs, ♠ Spades, ♥  Hearts, ♦ Diamonds
 2. Trumps suit in order: A-10-K-Q-9-8-7
 3. First played card suit: A-10-K-Q-9-8-7
-4. Any other card
+4. Any other card loses
 
 <!--split-->
 
