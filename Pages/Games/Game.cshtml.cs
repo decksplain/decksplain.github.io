@@ -1,11 +1,11 @@
 ﻿using Decksplain.Features.Card;
 using Decksplain.Features.Game;
+using Decksplain.Pages.Shared;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Decksplain.Pages.Games;
 
-public class GameModel : PageModel
+public class GameModel : LayoutModel
 {
     private readonly GamesRepository _gamesRepository;
     private readonly CardFactory _cardFactory;

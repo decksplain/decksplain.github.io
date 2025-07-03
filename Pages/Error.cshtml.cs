@@ -1,12 +1,12 @@
 using System.Diagnostics;
+using Decksplain.Pages.Shared;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Decksplain.Pages;
 
 [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 [IgnoreAntiforgeryToken]
-public class ErrorModel : PageModel
+public class ErrorModel : LayoutModel
 {
     public string? RequestId { get; set; }
 

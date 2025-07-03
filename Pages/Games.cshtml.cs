@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Decksplain.Pages;
 
-public class IndexModel : LayoutModel
+public class GamesModel : LayoutModel
 {
     private readonly GamesRepository _gamesRepository;
     private readonly CardFactory _cardFactory;
     public required CardDto[] Cards { get; set; }
 
-    public IndexModel(GamesRepository  gamesRepository, CardFactory cardFactory)
+    public GamesModel(GamesRepository  gamesRepository, CardFactory cardFactory)
     {
         _gamesRepository = gamesRepository;
         _cardFactory = cardFactory;
