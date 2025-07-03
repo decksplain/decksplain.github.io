@@ -1,10 +1,17 @@
-using Decksplain.Repositories;
+using Decksplain.Features.Card;
+using Decksplain.Features.Game;
+using Decksplain.Features.MarkdownWithFrontMatter;
+using Decksplain.Features.QrCode;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddScoped<MarkdownWithFrontMatterParserService>();
+builder.Services.AddScoped<QrCodeService>();
+builder.Services.AddScoped<CardFactory>();
 builder.Services.AddScoped<GamesRepository>();
 
 var app = builder.Build();

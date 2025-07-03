@@ -1,4 +1,5 @@
-﻿using Decksplain.Repositories;
+﻿using Decksplain.Features.Card;
+using Decksplain.Features.Game;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -7,12 +8,14 @@ namespace Decksplain.Pages.Games;
 public class GameModel : PageModel
 {
     private readonly GamesRepository _gamesRepository;
-    
-    public required Card Card { get; set; }
+    private readonly CardFactory _cardFactory;
 
-    public GameModel(GamesRepository gamesRepository)
+    public required CardDto CardDto { get; set; }
+
+    public GameModel(GamesRepository gamesRepository, CardFactory cardFactory)
     {
         _gamesRepository = gamesRepository;
+        _cardFactory = cardFactory;
     }
     
     public IActionResult OnGetAsync(string? title)
@@ -28,10 +31,8 @@ public class GameModel : PageModel
         {
             return NotFound();
         }
-        
-        string fullDomain = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}";
 
-        Card = new Card(game, fullDomain);
+        CardDto = _cardFactory.CreateFromGame(game);
         
         return Page();
     }

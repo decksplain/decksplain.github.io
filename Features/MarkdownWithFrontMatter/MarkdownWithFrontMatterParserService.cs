@@ -1,12 +1,13 @@
-﻿using Markdig;
+﻿using Decksplain.Features.Game;
+using Markdig;
 using Markdig.Extensions.Yaml;
 using Markdig.Renderers;
 using Markdig.Syntax;
 using YamlDotNet.Serialization;
 
-namespace Decksplain.Extensions;
+namespace Decksplain.Features.MarkdownWithFrontMatter;
 
-public static class MarkdownExtensions
+public class MarkdownWithFrontMatterParserService
 {
     private static IDeserializer GetYamlDeserializer() =>  new DeserializerBuilder()
         // .IgnoreUnmatchedProperties()
@@ -17,7 +18,7 @@ public static class MarkdownExtensions
         .UseYamlFrontMatter()
         .Build();
 
-    public static T? ReadMarkdownWithFrontMatter<T>(this string markdown) where T : IContent
+    public T? Read<T>(string markdown) where T : IContent
     {
         var pipeline = GetPipeline();
         

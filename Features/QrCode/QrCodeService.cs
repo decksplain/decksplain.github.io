@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using QRCoder;
 
-namespace Decksplain.Service;
+namespace Decksplain.Features.QrCode;
 
 public class QrCodeService
 {

@@ -1,11 +1,13 @@
 ﻿using YamlDotNet.Serialization;
 
+namespace Decksplain.Features.Game;
+
 public interface IContent
 {
     string Content { get; set; }
 }
 
-public class Game : IContent
+public class GameModel : IContent
 {
     [YamlMember(Alias = "title")]
     public required string Title { get; set; }
