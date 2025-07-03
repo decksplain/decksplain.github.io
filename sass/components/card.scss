@@ -58,13 +58,8 @@
         }
     }
 
-    svg {
-        // width: Inlined to improve loading.
+    .qr {
         float: right;
         margin-bottom: 1rem;
-
-        path {
-            fill: var(--colour-primary);
-        }
     }
 }

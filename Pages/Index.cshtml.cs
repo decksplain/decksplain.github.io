@@ -16,8 +16,10 @@ public class IndexModel : PageModel
     
     public IActionResult OnGetAsync()
     {
+        string fullDomain = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}";
+        
         Cards = _gamesRepository.GetGames()
-            .Select(game => new Card(game))
+            .Select(game => new Card(game, fullDomain))
             .ToArray();
         
         return Page();

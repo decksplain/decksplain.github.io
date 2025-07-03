@@ -9,7 +9,19 @@
   <ItemGroup>
     <PackageReference Include="AspNetCore.SassCompiler" Version="1.89.2" />
     <PackageReference Include="Markdig" Version="0.41.3" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
     <PackageReference Include="YamlDotNet" Version="16.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\components\card.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\components\card.css.map" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\components\page.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\components\page.css.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
 </Project>

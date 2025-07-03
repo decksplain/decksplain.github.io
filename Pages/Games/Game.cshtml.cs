@@ -28,8 +28,10 @@ public class GameModel : PageModel
         {
             return NotFound();
         }
+        
+        string fullDomain = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}";
 
-        Card = new Card(game);
+        Card = new Card(game, fullDomain);
         
         return Page();
     }

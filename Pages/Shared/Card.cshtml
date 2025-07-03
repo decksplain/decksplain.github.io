@@ -1,8 +1,7 @@
-﻿@using Decksplain.Extensions
-@model Card
+﻿@model Card
 <section class="card">
     <header>
-        <a href="/games/@Model.Title.Slugify()">
+        <a href="@Model.Url">
             <h2>@Model.Title</h2>
         </a>
         <div class="card-info">
@@ -10,7 +9,7 @@
             <p>⏳ @Model.RoundTime</p>
         </div>
     </header>
-    {% qr qr_url width:5rem; %}
+    @Html.Raw(Model.QrCode)
     @Html.Raw(Model.FrontContent)
 </section>
 <section class="card">
