@@ -9,6 +9,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddHttpContextAccessor();
 
+#if DEBUG
+builder.Services.AddSassCompiler();
+#endif
+
 builder.Services.AddScoped<MarkdownWithFrontMatterParserService>();
 builder.Services.AddScoped<QrCodeService>();
 builder.Services.AddScoped<CardFactory>();
