@@ -5,7 +5,7 @@ using Decksplain.Features.QrCode;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddControllers();
 builder.Services.AddRazorPages();
 builder.Services.AddHttpContextAccessor();
 
@@ -34,6 +34,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.MapControllers();
 app.MapStaticAssets();
 app.MapRazorPages()
    .WithStaticAssets();

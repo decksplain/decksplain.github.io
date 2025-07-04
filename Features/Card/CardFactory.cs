@@ -29,7 +29,7 @@ public class CardFactory
             RelativeUrl = url,
             FrontContent = contentSplit[0],
             BackContent = contentSplit.Length > 1 ? contentSplit[1] : null,
-            QrCode = _qrCodeService.Generate(fullDomain + url, "5rem")
+            QrCode = _qrCodeService.GenerateHtmlImage(fullDomain + url, "5rem")
         };
         
         return card;

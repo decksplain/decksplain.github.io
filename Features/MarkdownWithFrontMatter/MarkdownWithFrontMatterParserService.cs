@@ -10,12 +10,12 @@ namespace Decksplain.Features.MarkdownWithFrontMatter;
 public class MarkdownWithFrontMatterParserService
 {
     private static IDeserializer GetYamlDeserializer() =>  new DeserializerBuilder()
-        // .IgnoreUnmatchedProperties()
         .Build();
     
     private static MarkdownPipeline GetPipeline() => new MarkdownPipelineBuilder()
         .UseAdvancedExtensions()
         .UseYamlFrontMatter()
+        .Use<YamlFrontMatterExtension>()
         .Build();
 
     public T? Read<T>(string markdown) where T : IContent

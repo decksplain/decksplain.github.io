@@ -5,26 +5,33 @@ namespace Decksplain.Features.QrCode;
 
 public class QrCodeService
 {
-    public string Generate(string input, string widthHeight)
+    private const Base64QRCode.ImageType ImgType = Base64QRCode.ImageType.Png;
+    
+    public string GenerateBase64(string content)
     {
         using QRCodeGenerator qrGenerator = new QRCodeGenerator();
-        using QRCodeData qrCodeData = qrGenerator.CreateQrCode(input, QRCodeGenerator.ECCLevel.Q);
+        using QRCodeData qrCodeData = qrGenerator.CreateQrCode(content, QRCodeGenerator.ECCLevel.Q);
 
-        const Base64QRCode.ImageType imgType = Base64QRCode.ImageType.Png;
         Base64QRCode qrCode = new Base64QRCode(qrCodeData);
-        string qrCodeImageAsBase64 = qrCode.GetGraphic(
+        
+        return qrCode.GetGraphic(
             pixelsPerModule: 20,
             darkColor: Color.FromArgb(1, 40, 76), 
             lightColor: Color.Transparent, 
             drawQuietZones: false,
-            imgType: Base64QRCode.ImageType.Png
+            imgType: ImgType
         );
+    }
+    
+    public string GenerateHtmlImage(string content, string widthHeight)
+    {
+        string base64 = GenerateBase64(content);
         
         return  $"""
                  <img
                     class="qr"
                     alt="Embedded QR Code"
-                    src="data:image/{imgType.ToString().ToLower()};base64,{qrCodeImageAsBase64}"
+                    src="data:image/{ImgType.ToString().ToLower()};base64,{base64}"
                     style="width: {widthHeight}"
                  />
                  """;
