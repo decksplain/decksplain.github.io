@@ -16,24 +16,22 @@ public class CardFactory
     
     public CardDto CreateFromGame(Game.GameModel gameModel)
     {
+        string url = $"/games/{gameModel.Title.Slugify()}";
+        string fullDomain = $"{_httpContextAccessor.HttpContext!.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}";
+        
+        string[] contentSplit = gameModel.Content.Split("<!--split-->");
+        
         CardDto card = new()
         {
             Title = gameModel.Title,
             Players = gameModel.Players,
             RoundTime = gameModel.RoundTime,
-            Url = $"/games/{gameModel.Title.Slugify()}"
+            RelativeUrl = url,
+            FrontContent = contentSplit[0],
+            BackContent = contentSplit.Length > 1 ? contentSplit[1] : null,
+            QrCode = _qrCodeService.Generate(fullDomain + url, "5rem")
         };
         
-        string fullDomain = $"{_httpContextAccessor.HttpContext!.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}";
-
-        card.QrCode = _qrCodeService.Generate(fullDomain + card.Url, "5rem");
-        
-        string[] contentSplit = gameModel.Content.Split("<!--split-->");
-        card.FrontContent = contentSplit[0];
-        
-        if (contentSplit.Length > 1)
-            card.BackContent = contentSplit[1];
-
         return card;
     }
 }
