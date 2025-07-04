@@ -4,7 +4,7 @@ players: 2 - 4+
 round-time: 5 minutes
 ---
 
-Based on the original rules of Cabo but faster paced.
+Based on the original Cabo but faster paced.
 
 **Objective:** End the game with the **lowest score**
 
@@ -30,12 +30,12 @@ Based on the original rules of Cabo but faster paced.
 
 **Power cards:**
 
-| Card         | Power       | Effect                                       |
-|--------------|-------------|----------------------------------------------|
-| 7 - 8        | Peek        | Look at one of your own cards                |
-| 9 - 10       | Spy         | Look at one opponent’s card                  |
-| Jack / Queen | Swap        | Swap one of your cards with another player’s |
-| Black King   | Peek + Swap | Peek and then optionally swap                |
+| Card                   | Power                 | Effect                                       |
+|------------------------|-----------------------|----------------------------------------------|
+| 7 - 8                  | Peek                  | Look at one of your own cards                |
+| 9 - 10                 | Spy                   | Look at one opponent’s card                  |
+| Jack&nbsp;/&nbsp;Queen | Swap                  | Swap one of your cards with another player’s |
+| Black King             | Peek&nbsp;+&nbsp;Swap | Peek and then optionally swap                |
 
 <!--split-->
 
