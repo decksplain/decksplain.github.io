@@ -69,6 +69,21 @@ jobs:
         run: |
           kill $(cat website.pid)
 
+      - name: Restructure HTML files into folders with index.html
+        run: |
+          cd mirrored-site
+          find . -type f -name '*.html' ! -name 'index.html' | while read -r file; do
+            dir=$(dirname "$file")
+            base=$(basename "$file" .html)
+            mkdir -p "$dir/$base"
+            mv "$file" "$dir/$base/index.html"
+          done
+
+      - name: Fix internal links to use clean URLs
+        run: |
+          cd mirrored-site
+          find . -type f -name '*.html' -exec sed -i 's/href="\([^"]*\)\.html"/href="\1\/"/g' {} +
+
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
