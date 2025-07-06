@@ -58,8 +58,11 @@ jobs:
         run: |
           kill $(cat website.pid)
 
-      - name: Upload artifact
+      - name: Upload static files as artifact
+        id: deployment
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./mirrored-site/
 
 #  deploy:
 #    environment:
