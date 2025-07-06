@@ -69,10 +69,13 @@ jobs:
         run: |
           kill $(cat website.pid)
 
-      - name: Restructure HTML files into folders with index.html
+      - name: Restructure HTML files into folders with index.html (skip root index.html)
         run: |
           cd mirrored-site
           find . -type f -name '*.html' ! -name 'index.html' | while read -r file; do
+            if [[ "$file" == "./index.html" ]]; then
+              continue
+            fi
             dir=$(dirname "$file")
             base=$(basename "$file" .html)
             mkdir -p "$dir/$base"
