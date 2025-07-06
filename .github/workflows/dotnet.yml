@@ -62,8 +62,42 @@ jobs:
             --directory-prefix=static \
             --timeout=30 \
             --no-parent \
-            --convert-links
-            http://localhost:5273/
+            --adjust-extension \
+            http://localhost:5000
+          
+      - name: Restructure HTML files into folders with index.html (skip root index.html)
+        run: |
+          cd static
+          find . -type f -name '*.html' ! -name 'index.html' | while read -r file; do
+            if [[ "$file" == "./index.html" ]]; then
+              continue
+            fi
+            dir=$(dirname "$file")
+            base=$(basename "$file" .html)
+            mkdir -p "$dir/$base"
+            mv "$file" "$dir/$base/index.html"
+          done
+          
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - name: Add base path to all links
+        run: |
+          echo "Base path is $BASE_PATH"
+
+          cd mirrored-site
+          
+          ESC_BASE_PATH=$(echo "$BASE_PATH" | sed 's/\//\\\//g')
+          
+          # Prefix href="/..." links with base path
+          find . -type f -name '*.html' -exec sed -i -E \
+          "s|href=\"/([^/\"]*)\"|href=\"$ESC_BASE_PATH\\1\"|g" {} +
+      
+          # Prefix src="/..." links with base path
+          find . -type f -name '*.html' -exec sed -i -E \
+          "s|src=\"/([^/\"]*)\"|src=\"$ESC_BASE_PATH\\1\"|g" {} +
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Stop the website
         run: |
