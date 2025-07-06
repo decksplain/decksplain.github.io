@@ -14,13 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="wwwroot\css\components\card.css" />
-    <_ContentIncludedByDefault Remove="wwwroot\css\components\card.css.map" />
-    <_ContentIncludedByDefault Remove="wwwroot\css\components\page.css" />
-    <_ContentIncludedByDefault Remove="wwwroot\css\components\page.css.map" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
