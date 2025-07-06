@@ -52,8 +52,11 @@ round-time: 5 minutes
 - If a player peeks a card when they shouldn't, they get a penalty card
 - When the draw pile gets low, the discarded cards are shuffled back in
 - Only calling Cabo and having the lowest points is considered winning the round
+- The player who wins the round begins the next
 
 ---
+
+<img alt="QR Code to https://treyhunner.com/2015/06/cabo-card-game/" src="/api/qrcodes/aHR0cHM6Ly90cmV5aHVubmVyLmNvbS8yMDE1LzA2L2NhYm8tY2FyZC1nYW1lLw==" style="width: 5rem; float: right; margin: 0 0 1rem 1rem;">
 
 Similar to the rules Trey Hunner published:
 

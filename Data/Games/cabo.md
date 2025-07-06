@@ -1,6 +1,6 @@
 ---
 title: Cabo
-players: 2 - 4+
+players: 2 - 4
 round-time: 5 minutes
 ---
 
@@ -42,6 +42,8 @@ A failed matching requires picking up a penalty card.
 After the round ends, score up everyone's remaining cards and keep track of the total points everyone has accumulated. When a player gets to 100 points, the game ends.
 
 ---
+
+<img alt="QR Code to https://web.archive.org/web/20160303232751/http://www.playcabo.com/instructions.html" src="/api/qrcodes/aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmcvd2ViLzIwMTYwMzAzMjMyNzUxL2h0dHA6Ly93d3cucGxheWNhYm8uY29tL2luc3RydWN0aW9ucy5odG1s" style="width: 5rem; float: right; margin: 0 0 1rem 1rem;">
 
 Based on the rules originally printed by Mandy Henning and Melissa Limes, adapted to a 52 card deck:
 
