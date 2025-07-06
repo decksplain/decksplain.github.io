@@ -1,3 +1,4 @@
+using Decksplain.Features.BaseUrl;
 using Decksplain.Features.Card;
 using Decksplain.Features.Game;
 using Decksplain.Features.MarkdownWithFrontMatter;
@@ -17,6 +18,7 @@ builder.Services.AddScoped<MarkdownWithFrontMatterParserService>();
 builder.Services.AddScoped<QrCodeService>();
 builder.Services.AddScoped<CardFactory>();
 builder.Services.AddScoped<GamesRepository>();
+builder.Services.AddScoped<BaseUrlService>();
 
 var app = builder.Build();
 

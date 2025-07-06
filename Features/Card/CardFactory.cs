@@ -1,35 +1,34 @@
 ﻿using Decksplain.Extensions;
-using Decksplain.Features.QrCode;
+using Decksplain.Features.BaseUrl;
 
 namespace Decksplain.Features.Card;
 
 public class CardFactory
 {
-    private readonly QrCodeService _qrCodeService;
-    private readonly IHttpContextAccessor _httpContextAccessor;
+    private readonly BaseUrlService _baseUrlService;
 
-    public CardFactory(QrCodeService qrCodeService, IHttpContextAccessor httpContextAccessor)
+    public CardFactory(BaseUrlService  baseUrlService)
     {
-        _qrCodeService = qrCodeService;
-        _httpContextAccessor = httpContextAccessor;
+        _baseUrlService = baseUrlService;
     }
     
     public CardDto CreateFromGame(Game.GameModel gameModel)
     {
-        string url = $"/games/{gameModel.Title.Slugify()}";
-        string fullDomain = $"{_httpContextAccessor.HttpContext!.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host}";
+        string url = $"{_baseUrlService.GetBaseUrl()}/games/{gameModel.Title.Slugify()}";
+        byte[] urlBytes = System.Text.Encoding.UTF8.GetBytes(url);
+        string base64Url = Convert.ToBase64String(urlBytes);
         
         string[] contentSplit = gameModel.Content.Split("<!--split-->");
         
         CardDto card = new()
         {
+            RelativeUrl = url,
+            QrCodeUrl = $"/api/qrcodes/{base64Url}",
             Title = gameModel.Title,
             Players = gameModel.Players,
             RoundTime = gameModel.RoundTime,
-            RelativeUrl = url,
             FrontContent = contentSplit[0],
-            BackContent = contentSplit.Length > 1 ? contentSplit[1] : null,
-            QrCode = _qrCodeService.GenerateHtmlImage(fullDomain + url, "5rem")
+            BackContent = contentSplit.Length > 1 ? contentSplit[1] : null
         };
         
         return card;

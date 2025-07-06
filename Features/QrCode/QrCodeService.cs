@@ -22,18 +22,4 @@ public class QrCodeService
             imgType: ImgType
         );
     }
-    
-    public string GenerateHtmlImage(string content, string widthHeight)
-    {
-        string base64 = GenerateBase64(content);
-        
-        return  $"""
-                 <img
-                    class="qr"
-                    alt="Embedded QR Code"
-                    src="data:image/{ImgType.ToString().ToLower()};base64,{base64}"
-                    style="width: {widthHeight}"
-                 />
-                 """;
-    }
 }

@@ -28,7 +28,7 @@ public class QrCodesController : ControllerBase
     [HttpGet("{base64Content}")]
     public IActionResult Get(string base64Content)
     {
-        var base64EncodedBytes = System.Convert.FromBase64String(base64Content);
+        var base64EncodedBytes = Convert.FromBase64String(base64Content);
         string decoded = System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
         byte[] imageBytes = Convert.FromBase64String(_qrCodeService.GenerateBase64(decoded));
 

@@ -9,7 +9,12 @@
             <p>⏳ @Model.RoundTime</p>
         </div>
     </header>
-    @Html.Raw(Model.QrCode)
+    <img
+        class="qr"
+        alt="Embedded QR Code"
+        src="@Model.QrCodeUrl"
+        style="width: 5rem;"
+    />
     @Html.Raw(Model.FrontContent)
 </section>
 <section class="card">

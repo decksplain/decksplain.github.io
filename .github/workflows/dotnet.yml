@@ -36,10 +36,15 @@ jobs:
       - name: Build
         run: dotnet build --no-restore --configuration Release
 
+      - uses: actions/configure-pages@v5
+        id: pages
+
       - name: Run the website in background
         run: |
           nohup dotnet run --no-build --property:Configuration=Release --project ./Decksplain.csproj --urls "http://localhost:5000" > output.log 2>&1 &
           echo $! > website.pid
+        env:
+          BASE_URL: ${{ steps.pages.outputs.base_url }}
 
       - name: Wait for the website to start
         run: |
@@ -77,9 +82,6 @@ jobs:
             mkdir -p "$dir/$base"
             mv "$file" "$dir/$base/index.html"
           done
-          
-      - uses: actions/configure-pages@v5
-        id: pages
 
       - name: Add base path to all links
         run: |
