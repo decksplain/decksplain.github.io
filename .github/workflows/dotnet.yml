@@ -54,27 +54,16 @@ jobs:
           cat output.log
           exit 1
 
-#      - name: Mirror the site using wget
-#        run: |
-#          wget \
-#            --mirror \
-#            --convert-links \
-#            --adjust-extension \
-#            --page-requisites \
-#            --no-parent \
-#            --directory-prefix=mirrored-site \
-#            http://localhost:5000
-
-      - name: Install HTTrack
-        run: sudo apt-get update && sudo apt-get install -y httrack
-
-      - name: Mirror the site using HTTrack
+      - name: Mirror the site using wget
         run: |
-          httrack \
-            http://localhost:5000 \
-            -O mirrored-site \
-            -N "%p/%n/index.html" \
-            --quiet
+          wget \
+            --mirror \
+            --convert-links \
+            --adjust-extension \
+            --page-requisites \
+            --no-parent \
+            --directory-prefix=mirrored-site \
+            http://localhost:5000
 
       - name: Stop the website
         run: |
