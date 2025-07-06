@@ -1,0 +1,17 @@
+﻿@model Decksplain.Features.Card.CardDto
+<section class="card">
+    <header>
+        <a href="@Model.RelativeUrl">
+            <h2>@Model.Title</h2>
+        </a>
+        <div class="card-info">
+            <p>👥 @Model.Players players</p>
+            <p>⏳ @Model.RoundTime</p>
+        </div>
+    </header>
+    @Html.Raw(Model.QrCode)
+    @Html.Raw(Model.FrontContent)
+</section>
+<section class="card">
+    @Html.Raw(Model.BackContent)
+</section>

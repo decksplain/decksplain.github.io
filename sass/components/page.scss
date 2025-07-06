@@ -1,0 +1,97 @@
+@use "../mixins";
+
+.page-container {
+    max-width: calc(1300px + 1rem);
+    margin: auto;
+    padding: 0 1rem;
+
+    @include mixins.desktop {
+        padding: 0;
+    }
+}
+
+// .page-header-container {
+// }
+
+.page-header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include mixins.tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        color: var(--colour-primary);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+
+            h1 {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .logo-container {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        @include mixins.tablet {
+            width: auto;
+            text-align: left;
+        }
+    }
+
+    .logo {
+        width: 3rem;
+
+        @include mixins.tablet {
+            float: left;
+            margin-right: 0.5rem;
+        }
+    }
+
+    h1 {
+        margin: 0.25rem 0;
+
+        @include mixins.tablet {
+            float: left;
+        }
+    }
+
+    nav {
+        display: flex;
+        text-align: center;
+        margin: 1rem 0;
+        flex-direction: column;
+
+        @include mixins.tablet {
+            flex-direction: row;
+            align-self: center;
+            margin: 0;
+        }
+
+        a {
+            align-self: center;
+            margin: 0.5rem;
+        }
+    }
+}
+
+// .page-main {
+// }
+
+.paragraph-centered {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    @include mixins.desktop {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

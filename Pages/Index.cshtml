@@ -1,0 +1,15 @@
+﻿@page
+@using Decksplain.Features.Card
+@model IndexModel
+@{
+    Layout = "Shared/_Page";
+}
+<section class="paragraph-centered">
+    <p>Concise rule summaries for classic 54-card card decks, each game is designed to fit on a single card. Ideal for new players following along while an experienced player explains the rules in detail. Simple, clear, and always on hand.</p>
+</section>
+<section class="card-container">
+    @foreach (CardDto game in Model.Cards)
+    {
+        @await Html.PartialAsync("~/Pages/Shared/Card.cshtml", game)
+    }
+</section>

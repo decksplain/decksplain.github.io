@@ -1,0 +1,16 @@
+﻿@model LayoutModel
+<!DOCTYPE html>
+<html lang="en" class="@(Model.Layout.IsPrint ? "print" : "")">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decksplain</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/images/logo.svg" media="(prefers-color-scheme: light)" type="image/svg+xml">
+    <link rel="icon" href="~/images/logo-light.svg" media="(prefers-color-scheme: dark)" type="image/svg+xml">
+</head>
+<body>
+    @RenderBody()
+</body>
+</html>

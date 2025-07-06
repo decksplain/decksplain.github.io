@@ -1,0 +1,96 @@
+@use "sass:meta";
+@use "mixins";
+@use "normalize";
+
+@page {
+    size: A4 landscape;
+}
+
+// Variables in html so it can be combined with the .print
+html {
+    --scale-up: 2;
+    --text-margin: 0.3rem;
+    --colour-primary: #01284c;
+    --colour-secondary: #f8f1e1;
+
+    @include mixins.print {
+        --colour-primary: black;
+        --colour-secondary: white;
+        --scale-up: 1;
+    }
+
+    @include mixins.tablet {
+        --scale-up: 2.66;
+    }
+}
+
+html {
+    box-sizing: border-box;
+    font-size: calc(8px * var(--scale-up));
+    color: var(--colour-primary);
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background-color: var(--colour-secondary);
+
+    @include mixins.print {
+        width: 21cm;
+        height: 29.7cm;
+        margin: auto;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 0rem;
+    margin-bottom: var(--text-margin);
+}
+
+p {
+    margin: var(--text-margin) 0;
+    font-size: 1rem;
+}
+
+ul, ol {
+    padding-left: 1rem;
+
+    &:not(ul ul) {
+        margin: var(--text-margin) 0;
+    }
+}
+
+table, th, td {
+    border: 1px solid var(--colour-primary);
+    border-collapse: collapse;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    margin: 0.3rem 0;
+}
+
+th, td {
+    padding: 0.3rem;
+}
+
+hr {
+    border-color: var(--colour-primary);
+}
+
+.page-break {
+    break-after: page;
+}
+
+@include meta.load-css("components/card");
+@include meta.load-css("components/page");

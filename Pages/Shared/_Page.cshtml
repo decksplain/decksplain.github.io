@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "_Layout";
+}
+<header class="page-header-container">
+    <div class="page-header page-container">
+        <a class="logo-container" href="/">
+            <img class="logo" src="~/images/logo.svg" alt="Logo"/>
+            <h1>Decksplain</h1>
+        </a>
+        <nav>
+            <a href="/games/printable">Printable page</a>
+            <a href="https://github.com/harvzor/card-game-rules">GitHub</a>
+        </nav>
+    </div>
+</header>
+<main class="page-main">
+    <div class="page-container">
+        @RenderBody()
+    </div>
+</main>

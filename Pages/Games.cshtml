@@ -1,0 +1,12 @@
+﻿@page
+@using Decksplain.Features.Card
+@model GamesModel
+@{
+    Layout = "Shared/_Page";
+}
+<section class="card-container">
+    @foreach (CardDto game in Model.Cards)
+    {
+        @await Html.PartialAsync("~/Pages/Shared/Card.cshtml", game)
+    }
+</section>

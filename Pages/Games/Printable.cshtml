@@ -1,0 +1,13 @@
+﻿@page
+@using Decksplain.Features.Card
+@model PrintableModel
+@{
+    Layout = "Shared/_Layout";
+    Model.Layout.IsPrint = true;
+}
+<div class="card-container">
+    @foreach (CardDto game in Model.Cards)
+    {
+        @await Html.PartialAsync("~/Pages/Shared/Card.cshtml", game)
+    }
+</div>
