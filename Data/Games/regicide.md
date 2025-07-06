@@ -40,7 +40,7 @@ round-time: 5 - 20 minutes
 
 <!--split-->
 
-<img alt="QR Code to https://www.regicidegame.com/how-to-play/" src="/api/qrcodes/https%3A%2F%2Fwww.regicidegame.com%2Fhow-to-play%2F" style="width: 5rem; float: right; margin: 0 0 1rem 1rem;">
+<img alt="QR Code to https://www.regicidegame.com/how-to-play/" src="/api/qrcodes/aHR0cHM6Ly93d3cucmVnaWNpZGVnYW1lLmNvbS9ob3ctdG8tcGxheS8=" style="width: 5rem; float: right; margin: 0 0 1rem 1rem;">
 
 More rules:
 
