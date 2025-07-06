@@ -26,12 +26,11 @@
     overflow: hidden;
 
     @include mixins.print {
+        --border-width: 1px;
         width: 2.5in;
         min-height: auto;
         height: 3.5in;
-        padding: 1rem;
         margin: 0;
-        border: 1px solid var(--colour-primary);
     }
 
     @include mixins.tablet {
