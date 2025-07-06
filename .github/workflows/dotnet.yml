@@ -91,13 +91,13 @@ jobs:
           
           ESC_BASE_PATH=$(echo "$BASE_PATH" | sed 's/\//\\\//g')
           
-          # Prefix href="/..." links with base path
+          # Fix root-absolute href links: href="/foo" -> href="/base_path/foo"
           find . -type f -name '*.html' -exec sed -i -E \
-            "s|href=\"/([^/\"]*)\"|href=\"$ESC_BASE_PATH\\1\"|g" {} +
-      
-          # Prefix src="/..." links with base path
+          "s|href=\"/([^\"]*)\"|href=\"$ESC_BASE_PATH\\1\"|g" {} +
+          
+          # Fix root-absolute src links: src="/foo" -> src="/base_path/foo"
           find . -type f -name '*.html' -exec sed -i -E \
-            "s|src=\"/([^/\"]*)\"|src=\"$ESC_BASE_PATH\\1\"|g" {} +
+          "s|src=\"/([^\"]*)\"|src=\"$ESC_BASE_PATH\\1\"|g" {} +
         env:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
