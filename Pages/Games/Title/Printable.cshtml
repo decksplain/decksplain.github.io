@@ -1,0 +1,21 @@
+﻿@page "/games/{title}/printable"
+@model PrintableModel
+@{
+    Layout = "Shared/_Layout";
+    Model.Layout.IsPrint = true;
+}
+
+<div class="card-container">
+    @for (int i = 0; i < 6; i++)
+    {
+        @await Html.PartialAsync("~/Pages/Shared/CardFront.cshtml", Model.CardDto)
+    }
+</div>
+<div class="page-break"></div>
+<div class="card-container">
+    @for (int i = 0; i < 6; i++)
+    {
+        @await Html.PartialAsync("~/Pages/Shared/CardBack.cshtml", Model.CardDto)
+    }
+</div>
+<div class="page-break"></div>

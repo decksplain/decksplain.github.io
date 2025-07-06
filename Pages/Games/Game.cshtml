@@ -7,3 +7,6 @@
     @await Html.PartialAsync("~/Pages/Shared/CardFront.cshtml", Model.CardDto)
     @await Html.PartialAsync("~/Pages/Shared/CardBack.cshtml", Model.CardDto)
 </div>
+<section class="paragraph-centered">
+    <a href="@(Model.CardDto.RelativeUrl)/printable" class="button">🖨️ Printable page</a>
+</section>
