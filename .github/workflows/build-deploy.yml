@@ -1,4 +1,4 @@
-name: Dotnet
+name: Build and release
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build Dotnet Project
+    name: Build / run the Dotnet project and upload GH Pages artifact 
     runs-on: ubuntu-latest
 
     steps:
@@ -114,6 +114,7 @@ jobs:
           path: ./static/
 
   deploy:
+    name: Deploy GH Pages artifact to GH Pages
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     environment:
       name: github-pages

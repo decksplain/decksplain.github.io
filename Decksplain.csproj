@@ -17,4 +17,8 @@
     <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include=".github\images\index.png" />
+  </ItemGroup>
+
 </Project>
