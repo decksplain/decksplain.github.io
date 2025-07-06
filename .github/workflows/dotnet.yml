@@ -59,6 +59,7 @@ jobs:
           wget \
             --mirror \
             --convert-links \
+            --adjust-extension \
             --page-requisites \
             --no-parent \
             --directory-prefix=mirrored-site \
