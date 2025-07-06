@@ -57,58 +57,23 @@ jobs:
       - name: Mirror the site using wget
         run: |
           wget \
-            --mirror \
-            --convert-links \
-            --adjust-extension \
-            --page-requisites \
+            --recursive \
+            --no-host-directories \
+            --directory-prefix=static \
+            --timeout=30 \
             --no-parent \
-            --directory-prefix=mirrored-site \
-            http://localhost:5000
+            --convert-links
+            http://localhost:5273/
 
       - name: Stop the website
         run: |
           kill $(cat website.pid)
-
-      - name: Restructure HTML files into folders with index.html (skip root index.html)
-        run: |
-          cd mirrored-site
-          find . -type f -name '*.html' ! -name 'index.html' | while read -r file; do
-            if [[ "$file" == "./index.html" ]]; then
-              continue
-            fi
-            dir=$(dirname "$file")
-            base=$(basename "$file" .html)
-            mkdir -p "$dir/$base"
-            mv "$file" "$dir/$base/index.html"
-          done
-
-      - uses: actions/configure-pages@v5
-        id: pages
-
-      - name: Use base path from configure-pages output
-        run: |
-          echo "Base path is $BASE_PATH"
-
-          cd mirrored-site
-
-          ESC_BASE_PATH=$(echo "$BASE_PATH" | sed 's/\//\\\//g')
-
-          find . -type f -name '*.html' -exec sed -i -E \
-            "s|href=\"([^\"/]*/)?index\.html\"|href=\"$ESC_BASE_PATH\"|g; s|href=\"index\.html\"|href=\"$ESC_BASE_PATH\"|g" {} +
-
-          find . -type f -name '*.html' -exec sed -i -E \
-            "s|href=\"([^\"/]*)\.html\"|href=\"${ESC_BASE_PATH}\\1/\"|g" {} +
-
-          find . -type f -name '*.html' -exec sed -i \
-            's|\(\.\./\)|\1../|g' {} +
-        env:
-          BASE_PATH: ${{ steps.pages.outputs.base_path }}
-
+          
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./mirrored-site/localhost:5000
+          path: ./static/
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
