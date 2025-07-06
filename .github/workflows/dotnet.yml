@@ -84,6 +84,8 @@ jobs:
       - name: Add base path to all links
         run: |
           echo "Base path is $BASE_PATH"
+          
+          BASE_PATH="${BASE_PATH%/}/"
 
           cd static
           
