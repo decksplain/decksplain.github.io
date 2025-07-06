@@ -82,20 +82,27 @@ jobs:
             mv "$file" "$dir/$base/index.html"
           done
 
-      - name: Fix internal links including root index.html links
+      - uses: actions/configure-pages@v5
+        id: pages
+
+      - name: Use base path from configure-pages output
         run: |
+          echo "Base path is $BASE_PATH"
+
           cd mirrored-site
-          
-          # 1) Replace all href links to index.html with folder root (remove index.html)
+
+          ESC_BASE_PATH=$(echo "$BASE_PATH" | sed 's/\//\\\//g')
+
           find . -type f -name '*.html' -exec sed -i -E \
-            's|href="([^"]*/)?index\.html"|href="\1"|g; s|href="index\.html"|href="/"|g' {} +
-          
-          # 2) Convert all other href .html links to folder URLs ending with /
+            "s|href=\"([^\"/]*/)?index\.html\"|href=\"$BASE_PATH\"|g" {} +
+
           find . -type f -name '*.html' -exec sed -i -E \
-            's|href="([^"]*)\.html"|href="\1/"|g' {} +
-          
-          # 3) Fix relative links by going up one directory level
-          find . -type f -name '*.html' -exec sed -i 's|\(\.\./\)|\1../|g' {} +
+            "s|href=\"([^\"/][^\"]*)\.html\"|href=\"$BASE_PATH\\1/\"|g" {} +
+
+          find . -type f -name '*.html' -exec sed -i -E \
+            "s|href=\"((?!/|http)[^\"]+)\"|href=\"$BASE_PATH\\1\"|g" {} +
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload static files as artifact
         id: deployment
