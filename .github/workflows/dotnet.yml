@@ -85,17 +85,17 @@ jobs:
         run: |
           echo "Base path is $BASE_PATH"
 
-          cd mirrored-site
+          cd static
           
           ESC_BASE_PATH=$(echo "$BASE_PATH" | sed 's/\//\\\//g')
           
           # Prefix href="/..." links with base path
           find . -type f -name '*.html' -exec sed -i -E \
-          "s|href=\"/([^/\"]*)\"|href=\"$ESC_BASE_PATH\\1\"|g" {} +
+            "s|href=\"/([^/\"]*)\"|href=\"$ESC_BASE_PATH\\1\"|g" {} +
       
           # Prefix src="/..." links with base path
           find . -type f -name '*.html' -exec sed -i -E \
-          "s|src=\"/([^/\"]*)\"|src=\"$ESC_BASE_PATH\\1\"|g" {} +
+            "s|src=\"/([^/\"]*)\"|src=\"$ESC_BASE_PATH\\1\"|g" {} +
         env:
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
