@@ -1,10 +1,8 @@
 ---
 title: Cabo
-players: 2 - 4
+players: 2 - 4+
 round-time: 5 minutes
 ---
-
-<!-- Original rules? https://web.archive.org/web/20160303232751/http://www.playcabo.com/instructions.html -->
 
 **Objective:** End the game with the **lowest score**
 
@@ -53,13 +51,3 @@ Based on the rules originally printed by Mandy Henning and Melissa Limes, adapte
 Notable changes:
 - The original game has different cards for red and black kings so they could not be matched
 -->
-
-**House rules:**
-
-Consider the following rules to spice up your game:
-
-- Black Kings can Spy and (optionally) Swap
-- Cards can be matched and discarded with any card that's discarded
-- Matches can also be done with opponents cards
-  - If you discard an opponents card, you may replace it with one of your own
-- Calling Cabo and winning awards you -3 points

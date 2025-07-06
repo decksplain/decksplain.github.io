@@ -1,21 +1,18 @@
-﻿using Decksplain.Extensions;
-using Decksplain.Features.QrCode;
+﻿namespace Decksplain.Features.Card;
 
-namespace Decksplain.Features.Card;
-
-public class CardDto
+public record CardDto
 {
-    public string Url { get; set; }
+    public required string RelativeUrl { get; init; }
 
-    public string Title { get; set; }
+    public required string Title { get; init; }
 
-    public string Players { get; set; }
+    public required string Players { get; init; }
 
-    public string RoundTime { get; set; }
+    public required string RoundTime { get; init; }
 
-    public string FrontContent { get; set; }
+    public required string FrontContent { get; init; }
     
-    public string BackContent { get; set; }
+    public required string? BackContent { get; init; }
     
-    public string QrCode { get; set; }
+    public required string QrCode { get; init; }
 }

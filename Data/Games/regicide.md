@@ -38,9 +38,17 @@ round-time: 5 - 20 minutes
 - **♠ Spades** shield against enemy attack
 - **🂿 Jesters** negates immunity of enemey
 
-More rules: [https://www.regicidegame.com/how-to-play/](https://www.regicidegame.com/how-to-play/)
-
 <!--split-->
+
+<img alt="QR Code to https://www.regicidegame.com/how-to-play/" src="/api/qrcodes/https%3A%2F%2Fwww.regicidegame.com%2Fhow-to-play%2F" style="width: 5rem; float: right; margin: 0 0 1rem 1rem;">
+
+More rules:
+
+[https://www.regicidegame.com/how-to-play/](https://www.regicidegame.com/how-to-play/)
+
+<br></br>
+
+---
 
 Teaching the game in order:
 

@@ -19,7 +19,8 @@ public class GamesRepository
             .Select(markdownWithFrontMatter
                 => _markdownWithFrontMatterParserService.Read<GameModel>(markdownWithFrontMatter)
             )
-            .Where(game => game is not null)
+            .OfType<GameModel>()
+            .OrderBy(game => game.Title)
             .ToArray()!;
     }
 
