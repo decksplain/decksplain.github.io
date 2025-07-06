@@ -27,7 +27,7 @@ jobs:
 
       - name: Run the website in background
         run: |
-          nohup dotnet run --no-build --project ./Decksplain.csproj --urls "http://localhost:5000" > output.log 2>&1 &
+          nohup dotnet run --no-build --property:Configuration=Release --project ./Decksplain.csproj --urls "http://localhost:5000" > output.log 2>&1 &
           echo $! > website.pid
 
       - name: Wait for the website to start
