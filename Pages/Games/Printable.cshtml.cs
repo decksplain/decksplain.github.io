@@ -2,7 +2,6 @@ using Decksplain.Features.Card;
 using Decksplain.Features.Game;
 using Decksplain.Pages.Shared;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Decksplain.Pages.Games;
 

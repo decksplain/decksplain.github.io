@@ -17,7 +17,7 @@ public class QrCodeService
             darkColor: Color.FromArgb(1, 40, 76), 
             lightColor: Color.Transparent, 
             drawQuietZones: false,
-            imgType: Base64QRCode.ImageType.Png
+            imgType: imgType
         );
         
         return  $"""
