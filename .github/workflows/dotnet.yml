@@ -61,7 +61,7 @@ jobs:
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./mirrored-site/localhost_5000
+          path: ./mirrored-site/localhost:5000
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
