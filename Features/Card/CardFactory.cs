@@ -14,15 +14,16 @@ public class CardFactory
     
     public CardDto CreateFromGame(Game.GameModel gameModel)
     {
-        string url = $"{_baseUrlService.GetBaseUrl()}/games/{gameModel.Title.Slugify()}";
-        byte[] urlBytes = System.Text.Encoding.UTF8.GetBytes(url);
+        string relativeUrl = $"/games/{gameModel.Title.Slugify()}";
+        string absoluteUrl = _baseUrlService.GetBaseUrl() + relativeUrl;
+        byte[] urlBytes = System.Text.Encoding.UTF8.GetBytes(absoluteUrl);
         string base64Url = Convert.ToBase64String(urlBytes);
         
         string[] contentSplit = gameModel.Content.Split("<!--split-->");
         
         CardDto card = new()
         {
-            RelativeUrl = url,
+            RelativeUrl = relativeUrl,
             QrCodeUrl = $"/api/qrcodes/{base64Url}",
             Title = gameModel.Title,
             Players = gameModel.Players,
