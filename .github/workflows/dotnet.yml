@@ -82,7 +82,7 @@ jobs:
             mv "$file" "$dir/$base/index.html"
           done
 
-      - name: Fix internal links including root index.html links (href only)
+      - name: Fix internal links including root index.html links
         run: |
           cd mirrored-site
           
@@ -93,6 +93,9 @@ jobs:
           # 2) Convert all other href .html links to folder URLs ending with /
           find . -type f -name '*.html' -exec sed -i -E \
             's|href="([^"]*)\.html"|href="\1/"|g' {} +
+          
+          # 3) Fix relative links by going up one directory level
+          find . -type f -name '*.html' -exec sed -i 's|\(\.\./\)|\1../|g' {} +
 
       - name: Upload static files as artifact
         id: deployment
