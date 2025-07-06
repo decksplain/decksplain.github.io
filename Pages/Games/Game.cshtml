@@ -4,5 +4,6 @@
     Layout = "Shared/_Page";
 }
 <div class="card-container">
-    @await Html.PartialAsync("~/Pages/Shared/Card.cshtml", Model.CardDto)
+    @await Html.PartialAsync("~/Pages/Shared/CardFront.cshtml", Model.CardDto)
+    @await Html.PartialAsync("~/Pages/Shared/CardBack.cshtml", Model.CardDto)
 </div>

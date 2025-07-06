@@ -5,9 +5,23 @@
     Layout = "Shared/_Layout";
     Model.Layout.IsPrint = true;
 }
-<div class="card-container">
-    @foreach (CardDto game in Model.Cards)
-    {
-        @await Html.PartialAsync("~/Pages/Shared/Card.cshtml", game)
-    }
-</div>
+@foreach (CardDto[] gamesChunk in Model.Cards.Chunk(6))
+{
+    <div class="card-container">
+        @foreach (CardDto game in gamesChunk)
+        {
+            @await Html.PartialAsync("~/Pages/Shared/CardFront.cshtml", game)
+        }
+    </div>
+    <div class="page-break"></div>
+}
+@foreach (CardDto[] gamesChunk in Model.Cards.Chunk(6))
+{
+    <div class="card-container">
+        @foreach (CardDto game in gamesChunk)
+        {
+            @await Html.PartialAsync("~/Pages/Shared/CardBack.cshtml", game)
+        }
+    </div>
+    <div class="page-break"></div>
+}
