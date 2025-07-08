@@ -1,11 +1,11 @@
 ﻿<component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Hot Reload" type="RunDotNetWatch" factoryName="RunDotNetWatch">
-    <option name="exePath" value="$PROJECT_DIR$/bin/Debug/net9.0/Decksplain.exe" />
+    <option name="exePath" value="$PROJECT_DIR$/Decksplain/bin/Debug/net9.0/Decksplain.exe" />
     <option name="programParameters" value="" />
-    <option name="projectFilePath" value="$PROJECT_DIR$/Decksplain.csproj" />
+    <option name="projectFilePath" value="$PROJECT_DIR$/Decksplain/Decksplain.csproj" />
     <option name="projectTfm" value="net9.0" />
     <option name="watchParameters" value="" />
-    <option name="workingDirectory" value="$PROJECT_DIR$" />
+    <option name="workingDirectory" value="$PROJECT_DIR$/Decksplain" />
     <method v="2" />
   </configuration>
 </component>
