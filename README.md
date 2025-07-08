@@ -22,7 +22,7 @@ The website is built using Dotnet but the end result is statically cached and up
 ### Running
 
 ```bash
-dotnet run
+dotnet run --project .\Decksplain\
 ```
 
 ### Releasing
