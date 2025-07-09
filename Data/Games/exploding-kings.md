@@ -4,27 +4,35 @@ players: 2 - 5
 round-time: 10 minutes
 ---
 
-**Objective:** Don't pickup an Exploding King
+**Objective:** Don't pick up an Exploding King
 
 **Setup:**
 
 1. Discard Jacks and Queens
 2. Each player gets an Ace or Joker and 6 random cards
 3. Count the number of players, shuffle the same number of Kings into the deck minus 1
-3. Shuffle extra Aces/Jokers into the deck
-4. Place the remaining (shuffled) deck face down
+4. Shuffle extra Aces/Jokers into the deck
+5. Place the remaining (shuffled) deck face down
 
 **Take your turn**:
 
-- Play (and discard) as many cards from your hand as you like until your turn is over
+- Play (and discard, using the ability) as many cards from your hand as you like until your turn is over
 - End your turn by picking up a card
-- If you pickup a King, you must Defuse or lose
+- If you pick up a King, you must Defuse or lose
+
+**Defusing**:
+
+When you pick up a King and Defuse, **you must put the King back**
+
+You can put it face down, wherever you like, inside the deck, without inspecting the deck (and you can do this in secret).
 
 **Hints:**
 
 - Your cards help you avoid the Kings, play as many as you like
 - Running out of cards is fine, but now you're powerless to avoid the King
 - It's unlikely the King is on top of the deck, especially at the start of the game
+- The game really starts when someone picks up the King and defuses as they could put it anywhere
+- **When you've been Attacked, draw one card at a time**
 
 <!--split-->
 
@@ -33,7 +41,7 @@ round-time: 10 minutes
 | Card        | Power          | Effect                                                                                                          |
 |-------------|----------------|-----------------------------------------------------------------------------------------------------------------|
 | King        | Bomb           | This kills you                                                                                                  |
-| Ace / Joker | Defuse         | Ace (or Joker) is an extra life! Defuse the King and place the King back whereever you like in the deck         |
+| Ace / Joker | Defuse         | Ace (or Joker) is an extra life! Defuse the King and place the King back wherever you like in the deck          |
 | 1 - 4       | None           | Useless unless used in a combo                                                                                  |
 | 5           | Favour         | Force another player to give you 1 card from their hand. They choose which card to give you                     |
 | 6           | Skip           | End (only!) one of your turns                                                                                   |
