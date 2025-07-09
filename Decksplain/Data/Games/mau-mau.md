@@ -4,7 +4,7 @@ players: 2 - 5
 round-time: 5 - 10 minutes
 ---
 
-**Objective:** Be the first player to rid your cards
+**Objective:** Get rid of your cards
 
 **Setup:**
 
