@@ -5,6 +5,7 @@
       - "5000:5000"
     environment:
       # GitHub Pages base path
-      - BASE_PATH=/
+      - BASE_PATH
+      - BASE_URL
     volumes:
       - ./static:/app/static
