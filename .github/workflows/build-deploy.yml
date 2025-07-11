@@ -2,6 +2,11 @@ name: Build and release via Docker Compose
 
 on:
   workflow_dispatch:
+    inputs:
+      release:
+        description: 'Deploy to GitHub Pages?'
+        required: false
+        default: 'false'
   pull_request:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -38,11 +43,14 @@ jobs:
 
   deploy:
     name: Deploy GitHub Pages artifact to GitHub Pages
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: |
+      github.ref == 'refs/heads/main'
+      && github.event_name != 'pull_request'
+      && github.event.inputs.release == 'true'
     needs: build
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: github-p  ages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
