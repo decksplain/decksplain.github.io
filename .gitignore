@@ -485,4 +485,5 @@ $RECYCLE.BIN/
 
 ## Custom
 
-Decksplain/wwwroot/css
+Decksplain/wwwroot/css/
+static/
