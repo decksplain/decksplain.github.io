@@ -33,8 +33,14 @@ jobs:
       - name: Build Docker Compose services
         run: docker compose build
 
+      - uses: actions/configure-pages@v5
+        id: pages
+
       - name: Run the container and generate static site
         run: docker compose up --build decksplain
+        env:
+          BASE_URL: ${{ steps.pages.outputs.base_url }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
 
       - name: Upload static site artifact
         uses: actions/upload-pages-artifact@v3
