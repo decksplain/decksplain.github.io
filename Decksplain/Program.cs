@@ -3,6 +3,7 @@ using Decksplain.Features.Card;
 using Decksplain.Features.Game;
 using Decksplain.Features.MarkdownWithFrontMatter;
 using Decksplain.Features.QrCode;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
