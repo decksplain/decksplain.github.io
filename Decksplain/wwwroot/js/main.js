@@ -1,12 +1,7 @@
-﻿if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker
-            .register('/service-worker.js')
-            .then((registration) => {
-                console.log('Service worker registered with scope:', registration.scope);
-            })
-            .catch((error) => {
-                console.error('Service worker registration failed:', error);
-            });
-    });
-}
+﻿document.getElementById('enable-offline').addEventListener('click', () => {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => console.log('Service worker registered:', reg))
+            .catch(err => console.error('Service worker registration failed:', err));
+    }
+});
