@@ -1,20 +1,25 @@
 ﻿using Decksplain.Extensions;
 using Decksplain.Features.BaseUrl;
+using Microsoft.AspNetCore.Mvc;
+using QRCoder;
 
 namespace Decksplain.Features.Card;
 
 public class CardFactory
 {
+    private readonly LinkGenerator _linkGenerator;
     private readonly BaseUrlService _baseUrlService;
 
-    public CardFactory(BaseUrlService  baseUrlService)
+    public CardFactory(LinkGenerator linkGenerator, BaseUrlService  baseUrlService)
     {
+        _linkGenerator = linkGenerator;
         _baseUrlService = baseUrlService;
     }
     
     public CardDto CreateFromGame(Game.GameModel gameModel)
     {
-        string relativeUrl = $"/games/{gameModel.Title.Slugify()}/";
+        string relativeUrl = _linkGenerator.GetPathByPage("/Games/Game", null, new { title = gameModel.Title.Slugify() })
+            ?? throw new Exception("Unable to find game URL");
         string absoluteUrl = _baseUrlService.GetBaseUrl() + relativeUrl;
         byte[] urlBytes = System.Text.Encoding.UTF8.GetBytes(absoluteUrl);
         string base64Url = Convert.ToBase64String(urlBytes);

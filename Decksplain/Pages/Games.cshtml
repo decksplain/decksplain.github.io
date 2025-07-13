@@ -12,5 +12,5 @@
     }
 </section>
 <section class="paragraph-centered">
-    <a href="/games/printable/" class="button">🖨️ Printable page</a>
+    <a href="@(Url.Page("/Games/Printable") ?? throw new Exception("Cannot get printable games page"))" class="button">🖨️ Printable page</a>
 </section>

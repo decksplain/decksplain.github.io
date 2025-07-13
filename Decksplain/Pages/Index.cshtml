@@ -15,5 +15,5 @@
     }
 </section>
 <section class="paragraph-centered">
-    <a href="/games/" class="button">View all games</a>
+    <a href="@(Url.Page("/Games") ?? throw new Exception("Cannot get games page"))" class="button">View all games</a>
 </section>

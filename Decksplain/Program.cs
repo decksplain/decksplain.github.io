@@ -3,12 +3,16 @@ using Decksplain.Features.Card;
 using Decksplain.Features.Game;
 using Decksplain.Features.MarkdownWithFrontMatter;
 using Decksplain.Features.QrCode;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddRazorPages();
+builder.Services.AddRouting(options =>
+{
+    options.AppendTrailingSlash = true;
+    options.LowercaseUrls = true;
+});
 builder.Services.AddHttpContextAccessor();
 
 #if DEBUG
