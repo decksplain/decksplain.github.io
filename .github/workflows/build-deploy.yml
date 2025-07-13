@@ -35,7 +35,7 @@ jobs:
         id: pages
 
       - name: Run the container and generate static site
-        run: docker compose up --build decksplain
+        run: docker compose up --build --abort-on-container-exit --exit-code-from decksplain
         env:
           BASE_URL: ${{ steps.pages.outputs.base_url }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
