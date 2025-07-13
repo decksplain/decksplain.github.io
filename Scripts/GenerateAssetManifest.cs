@@ -3,10 +3,15 @@
 using System.Text.Json;
 
 const string staticRoute = ".\\static\\";
+string[] ignoredPaths =
+[
+    "/asset-manifest.json",
+    "/service-worker.js"
+];
 
-List<string> fileNames = Directory.EnumerateFiles(staticRoute, "*", SearchOption.AllDirectories)
+string[] fileNames = Directory.EnumerateFiles(staticRoute, "*", SearchOption.AllDirectories)
     .Select(fileName => fileName
-        // .\static\index.html -> \index.html
+        // .\static\index.html -> \index.html.
         .Replace(staticRoute, "\\")
         // \index.html -> /index.html
         // Change file system slashes to web slashes.
@@ -14,8 +19,9 @@ List<string> fileNames = Directory.EnumerateFiles(staticRoute, "*", SearchOption
         // /index.html -> /
         // Change index.html routes to directory routing.
         .Replace("index.html", "")
-    )
-    .ToList();
+	)
+	.Where(path => !ignoredPaths.Contains(path))
+    .ToArray();
 
 // TODO: figure out if I need to add these
 // fileNames.Add("service-worker.js");
