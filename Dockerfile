@@ -9,4 +9,4 @@ RUN dotnet build --no-restore --configuration Release
 
 EXPOSE 5000
 
-CMD ["bash", "/app/run-and-mirror.sh"]
+CMD ["bash", "/app/Scripts/run-and-mirror.sh"]
