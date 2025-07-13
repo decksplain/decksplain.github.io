@@ -5,11 +5,10 @@ using System.Text.Json;
 string staticRoute = $".{Path.DirectorySeparatorChar}";
 string[] ignoredPaths =
 [
-    "/asset-manifest.json",
     "/service-worker.js"
 ];
 
-string[] fileNames = Directory.EnumerateFiles(staticRoute, "*", SearchOption.AllDirectories)
+List<string> fileNames = Directory.EnumerateFiles(staticRoute, "*", SearchOption.AllDirectories)
     .Select(fileName => fileName
         // .\static\index.html -> \index.html.
         .Replace(staticRoute, "\\")
@@ -21,15 +20,14 @@ string[] fileNames = Directory.EnumerateFiles(staticRoute, "*", SearchOption.All
         .Replace("index.html", "")
 	)
 	.Where(path => !ignoredPaths.Contains(path))
-    .ToArray();
+    .ToList();
 
 // TODO: figure out if I need to add these
-// fileNames.Add("service-worker.js");
 // fileNames.Add("images/logo-square.svg");
 
 Manifest manifest = new()
 {
-    Version = "1.0.0",
+    Version = "1.0.1",
     Assets = fileNames,
 };
 
