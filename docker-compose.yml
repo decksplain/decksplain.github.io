@@ -8,5 +8,6 @@
       - BASE_PATH=/
       # GitHub Pages Domain
       - BASE_URL
+      - TAG_NAME
     volumes:
       - ./static:/app/static

@@ -27,7 +27,7 @@ List<string> fileNames = Directory.EnumerateFiles(staticRoute, "*", SearchOption
 
 Manifest manifest = new()
 {
-    Version = "1.0.1",
+    Version = Environment.GetEnvironmentVariable("TAG_NAME") ?? "0.0.0",
     Assets = fileNames,
 };
 

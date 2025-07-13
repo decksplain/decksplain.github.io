@@ -41,6 +41,7 @@ jobs:
         env:
           BASE_URL: ${{ steps.pages.outputs.base_url }}
           BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          TAG_NAME: ${{ github.ref_name }}
 
       - name: Upload static site artifact
         uses: actions/upload-pages-artifact@v3
