@@ -8,15 +8,15 @@ round-time: 5 - 10 minutes
 
 **Setup:**
 
-1. Discard jokers, combine decks if playing with more players
+1. Discard Jokers, combine decks if playing with more players
 2. Deal cards out to all players which they can look at
     - Some players may end up with an extra card
-3. The player to the left of the dealer starts with aces
+3. The player to the left of the dealer starts with Aces
 
 **Take your turn**:
 
-- Declare the number of cards you're discarding and the rank (e.g. 2 aces)
-  - You may only follow the previous rank (e.g. 2 has to be played after ace)
+- Declare the number of cards you're discarding and the rank (e.g. 2 Aces)
+  - You may only follow the previous rank (e.g. 2 has to be played after Ace)
 - Discard, face down, the same number of cards you declared
   - Note that the cards you discard may not match the cards you declared
 
@@ -46,6 +46,6 @@ https://en.wikipedia.org/wiki/Cheat_(game)
 
 **Variations:**
 
-- allow passing play if no card can be played
-- allow going up and down through the ranks
-- allow players to lie about how many cards they are playing
+- Allow passing play if no card can be played
+- Allow going up and down through the ranks
+- Allow players to lie about how many cards they are playing

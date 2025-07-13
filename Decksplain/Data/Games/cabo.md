@@ -51,5 +51,5 @@ Based on the rules originally printed by Mandy Henning and Melissa Limes, adapte
 
 <!--
 Notable changes:
-- The original game has different cards for red and black kings so they could not be matched
+- The original game has different cards for red and black Kings so they could not be matched
 -->

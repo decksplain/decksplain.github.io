@@ -8,11 +8,12 @@ round-time: 10 minutes
 
 Basic rules for a suit game
 
-**Objective:** Win each round with the best card, end the game with the **highest score**
+**Objective:** Win each trick with the best card, end the game with the **highest score**
 
 **Vocabulary:**
 
-- trump cards are the highest valued
+- A **trick** is when each player plays one card (a round of cards)
+- A **trump** card is a special suit (or set of cards) that beats all other suits in a trick, regardless of rank
 
 **Setup:**
 
