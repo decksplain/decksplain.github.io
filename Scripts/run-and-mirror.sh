@@ -26,6 +26,7 @@ wget \
   --adjust-extension \
   http://localhost:5000
 
+echo "Copying in missed static files..."
 cp ./Decksplain/wwwroot/service-worker.js ./static/service-worker.js
 cp ./Decksplain/wwwroot/images/logo-square.svg ./static/images/logo-square.svg
 
