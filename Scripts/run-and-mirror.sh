@@ -51,6 +51,9 @@ find . -type f -name '*.html' -exec sed -i -E \
 find . -type f -name '*.html' -exec sed -i -E \
 "s|src=\"/([^\"]*)\"|src=\"$ESC_BASE_PATH\\1\"|g" {} +
 
+echo "Generating manifest..."
+dotnet run ../Scripts/GenerateAssetManifest.cs
+
 cd ..
 
 echo "Stopping server..."

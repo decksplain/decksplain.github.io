@@ -2,7 +2,7 @@
 
 using System.Text.Json;
 
-const string staticRoute = ".\\static\\";
+string staticRoute = $".{Path.DirectorySeparatorChar}";
 string[] ignoredPaths =
 [
     "/asset-manifest.json",
@@ -14,7 +14,7 @@ string[] fileNames = Directory.EnumerateFiles(staticRoute, "*", SearchOption.All
         // .\static\index.html -> \index.html.
         .Replace(staticRoute, "\\")
         // \index.html -> /index.html
-        // Change file system slashes to web slashes.
+        // Change Windows file system slashes to web slashes.
         .Replace("\\", "/")
         // /index.html -> /
         // Change index.html routes to directory routing.
@@ -39,7 +39,7 @@ string json = JsonSerializer.Serialize(manifest, new JsonSerializerOptions
     WriteIndented = true 
 });
 
-File.WriteAllText(".\\static\\asset-manifest.json", json);
+File.WriteAllText($"{staticRoute}asset-manifest.json", json);
 
 public class Manifest
 {
