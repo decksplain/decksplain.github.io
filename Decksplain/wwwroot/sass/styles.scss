@@ -62,6 +62,8 @@ p {
 }
 
 a {
+    word-break: break-all;
+
     @include mixins.print {
         color: var(--colour-primary);
         text-decoration: none;
