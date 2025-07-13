@@ -26,6 +26,10 @@ wget \
   --adjust-extension \
   http://localhost:5000
 
+echo "Copying in missed static files..."
+cp ./Decksplain/wwwroot/service-worker.js ./static/service-worker.js
+cp ./Decksplain/wwwroot/images/logo-square.svg ./static/images/logo-square.svg
+
 echo "Restructure HTML files into folders with index.html (skip root index.html)..."
 cd static
 find . -type f -name '*.html' ! -name 'index.html' | while read -r file; do
@@ -46,6 +50,9 @@ find . -type f -name '*.html' -exec sed -i -E \
 
 find . -type f -name '*.html' -exec sed -i -E \
 "s|src=\"/([^\"]*)\"|src=\"$ESC_BASE_PATH\\1\"|g" {} +
+
+echo "Generating manifest..."
+dotnet run ../Scripts/GenerateAssetManifest.cs
 
 cd ..
 

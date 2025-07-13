@@ -1,0 +1,12 @@
+﻿{
+  "name": "Decksplain",
+  "icons": [
+    {
+      "src": "images/logo-square.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "start_url": "/",
+  "display": "minimal-ui"
+}
