@@ -5,4 +5,8 @@
     color: var(--colour-secondary);
     text-decoration: none;
     background-color: var(--colour-primary);
+    
+    &:hover {
+        cursor: pointer;
+    }
 }
