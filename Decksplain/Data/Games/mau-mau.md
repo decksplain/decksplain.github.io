@@ -1,7 +1,7 @@
 ---
 title: Mau Mau
 players: 2 - 5
-round-time: 5 - 10 minutes
+round-time: 5 - 10
 ---
 
 **Objective:** Get rid of your cards

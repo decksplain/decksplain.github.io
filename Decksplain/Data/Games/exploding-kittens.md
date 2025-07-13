@@ -1,7 +1,7 @@
 ---
 title: Exploding Kittens
-players: 2+
-round-time: 10 minutes
+players: 2 - 5+
+round-time: 10 - 20
 ---
 
 **Objective:** Don't pick up an Exploding Kitten

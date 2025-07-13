@@ -1,7 +1,7 @@
 ---
 title: Officer's Skat
 players: 2
-round-time: 10 minutes
+round-time: 10
 ---
 
 <!-- Rules from https://en.wikipedia.org/wiki/Officers%27_Skat -->

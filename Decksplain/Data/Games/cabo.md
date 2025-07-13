@@ -1,7 +1,7 @@
 ---
 title: Cabo
 players: 2 - 4
-round-time: 5 minutes
+round-time: 5
 ---
 
 **Objective:** End the game with the **lowest score**

@@ -1,7 +1,7 @@
 ---
 title: Regicide
 players: 1 - 4
-round-time: 5 - 20 minutes
+round-time: 5 - 20
 ---
 
 **Objective:** Kill the royal cards

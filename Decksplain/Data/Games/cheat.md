@@ -1,7 +1,7 @@
 ﻿---
 title: Cheat / Bullshit / I Doubt It
 players: 2 - 4+
-round-time: 5 - 10 minutes
+round-time: 5 - 10
 ---
 
 **Objective:** Get rid of your cards

@@ -5,8 +5,8 @@
             <h2>@Model.Title</h2>
         </a>
         <div class="card-info">
-            <p>👥 @Model.Players players</p>
-            <p>⏳ @Model.RoundTime</p>
+            <p>@Html.Raw(Model.Players) players</p>
+            <p>@Html.Raw(Model.RoundTime) minutes</p>
         </div>
     </header>
     <img
