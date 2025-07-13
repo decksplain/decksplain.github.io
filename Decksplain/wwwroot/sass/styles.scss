@@ -61,6 +61,13 @@ p {
     font-size: 1rem;
 }
 
+a {
+    @include mixins.print {
+        color: var(--colour-primary);
+        text-decoration: none;
+    }
+}
+
 ul, ol {
     padding-left: 1rem;
 
