@@ -18,19 +18,18 @@ round-time: 5 - 10
 - Declare the number of cards you're discarding and the rank (e.g. 2 Aces)
   - You may only follow the previous rank (e.g. 2 has to be played after Ace)
 - Discard, face down, the same number of cards you declared
-  - Note that the cards you discard may not match the cards you declared
+  - Note that the cards you discard don't have to match the cards you declared
 
 **Calling cheat**:
 
 1. If you think a player has cheated, you can challenge that player by saying "Cheat"
 2. The played cards are revealed
     1. If the player cheated, they take all the discarded cards, you then start the next play
-    2. If the player did not lie, you take all the discarded cards, and play continues clockwise
+    2. If the player did not cheat, you take all the discarded cards, and play continues with the next player after you
 
 **Other notes**:
 
-- Aces follow kings
-- The game is played clockwise
+- Aces follow Kings
 
 <!--split-->
 
