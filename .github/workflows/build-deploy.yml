@@ -1,4 +1,4 @@
-name: Build and release via Docker Compose
+name: Build (and maybe release to GitHub Pages)
 
 on:
   workflow_dispatch:
