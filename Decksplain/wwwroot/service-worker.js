@@ -1,33 +1,16 @@
-﻿const CACHE_NAME = 'v1';
-const pagesToCache = [
-    '/',
-    '/games/cabo'
-];
-
-fetch('asset-manifest.json')
+﻿const CACHE_NAME = 'static-cache-v';
 
 self.addEventListener('install', event =>
 {
     event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(pagesToCache);
-        })
-    );
-    
-    event.waitUntil(
         fetch('asset-manifest.json')
             .then(response => response.json())
             .then(manifest => {
-                return caches.open('static-cache-v' + manifest.version).then(cache => {
-                    const urlsToCache = manifest.assets.map(a => a.url);
-                    return cache.addAll(urlsToCache);
+                return caches.open(CACHE_NAME).then(cache => {
+                    return cache.addAll(manifest.assets);
                 });
             })
     );
-});
-
-self.addEventListener('install', (event) => {
-    
 });
 
 self.addEventListener('fetch', (event) => {

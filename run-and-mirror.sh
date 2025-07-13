@@ -26,6 +26,9 @@ wget \
   --adjust-extension \
   http://localhost:5000
 
+cp ./Decksplain/wwwroot/service-worker.js ./static/service-worker.js
+cp ./Decksplain/wwwroot/images/logo-square.svg ./static/images/logo-square.svg
+
 echo "Restructure HTML files into folders with index.html (skip root index.html)..."
 cd static
 find . -type f -name '*.html' ! -name 'index.html' | while read -r file; do
