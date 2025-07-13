@@ -14,7 +14,7 @@ public class CardFactory
     
     public CardDto CreateFromGame(Game.GameModel gameModel)
     {
-        string relativeUrl = $"/games/{gameModel.Title.Slugify()}";
+        string relativeUrl = $"/games/{gameModel.Title.Slugify()}/";
         string absoluteUrl = _baseUrlService.GetBaseUrl() + relativeUrl;
         byte[] urlBytes = System.Text.Encoding.UTF8.GetBytes(absoluteUrl);
         string base64Url = Convert.ToBase64String(urlBytes);
