@@ -47,6 +47,12 @@
         a {
             color: var(--colour-primary);
             text-decoration: none;
+            
+            &:hover {
+                h2 {
+                    text-decoration: underline;
+                }
+            }
         }
 
         .card-info {
