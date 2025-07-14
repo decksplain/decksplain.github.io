@@ -1,8 +1,34 @@
-﻿function installServiceWorker() {
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then(reg => console.log('Service worker registered:', reg))
-            .catch(err => console.error('Service worker registration failed:', err));
+﻿async function installServiceWorker() {
+    if (!('serviceWorker' in navigator)) {
+        return;
+    }
+
+    try {
+        const registration = await navigator.serviceWorker.register('/service-worker.js')
+
+        console.log('Service worker registered:', registration);
+    } catch (err) {
+        console.error('Service worker registration failed:', err);
+    }
+}
+
+async function updateServiceWorkerCache() {
+    return new Promise(resolve => {
+        navigator.serviceWorker.controller.postMessage("UPDATE_CACHE");
+
+        navigator.serviceWorker.addEventListener('message', event => {
+            if (event.data === 'CACHE_UPDATED') {
+                resolve();
+            }
+        });
+    })
+}
+
+async function uninstallServiceWorker() {
+    const registrations = await navigator.serviceWorker.getRegistrations();
+
+    for (const registration of registrations) {
+        await registration.unregister();
     }
 }
 
@@ -36,11 +62,11 @@ async function getCurrentVersion() {
 
 async function setupInstallButton() {
     const manifest = await getManifest();
-    
+
     if (!manifest) {
         return;
     }
-    
+
     const currentVersion = await getCurrentVersion();
 
     const button = document.querySelector('#enable-offline')
@@ -56,8 +82,19 @@ async function setupInstallButton() {
     }
 
     button
-        .addEventListener('click', () => {
-           installServiceWorker(); 
+        .addEventListener('click', async () => {
+            if (currentVersion) {
+                await updateServiceWorkerCache();
+
+                location.reload();
+            } else {
+                await installServiceWorker();
+
+                navigator.serviceWorker.ready.then(() => {
+                    console.log('Service worker ready and controlling the page');
+                    location.reload();
+                });
+            }
         });
 }
 
@@ -66,15 +103,13 @@ async function setupUninstallButton() {
         return;
 
     const button = document.querySelector('#disable-offline');
-    
+
     button.style.display = "";
-    
-    button.addEventListener('click', () => {
-        navigator.serviceWorker.getRegistrations().then(registrations => {
-            for (const registration of registrations) {
-                registration.unregister();
-            }
-        });
+
+    button.addEventListener('click', async () => {
+        await uninstallServiceWorker();
+
+        location.reload();
     })
 }
 
