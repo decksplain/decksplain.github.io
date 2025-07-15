@@ -71,10 +71,41 @@ a {
 }
 
 ul, ol {
-    padding-left: 1rem;
+    list-style: none;
+    padding: 0;
 
     &:not(ul ul) {
         margin: var(--text-margin) 0;
+    }
+    
+    li {
+        padding-left: 1rem;
+    }
+}
+
+ul {
+    > li {
+        &:before {
+            content: '•';
+            margin-right: 0.5rem;
+            margin-left: -1rem;
+            font-size: 1.2rem;
+            line-height: 1rem;
+        }
+    }
+}
+
+ol {
+    counter-reset: counter;
+    
+    > li {
+        counter-increment: counter;
+
+        &:before {
+            content: counters(counter, ".") ". ";
+            float: left;
+            margin-left: -1rem;
+        }
     }
 }
 
