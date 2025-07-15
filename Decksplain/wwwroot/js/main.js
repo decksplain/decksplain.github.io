@@ -73,11 +73,10 @@ async function setupInstallButton() {
 
     if (currentVersion) {
         if (currentVersion !== manifest.version) {
-            button.innerHTML = `Upgrade from ${currentVersion} to ${manifest.version}`;
+            button.innerHTML = `Update cache from ${currentVersion} to ${manifest.version}`;
             button.style.display = "";
         }
     } else {
-        button.innerHTML = `Install ${manifest.version}`;
         button.style.display = "";
     }
 
@@ -89,6 +88,8 @@ async function setupInstallButton() {
                 location.reload();
             } else {
                 await installServiceWorker();
+
+                alert("Website is now available offline. Considering installing the app too!");
 
                 navigator.serviceWorker.ready.then(() => {
                     console.log('Service worker ready and controlling the page');

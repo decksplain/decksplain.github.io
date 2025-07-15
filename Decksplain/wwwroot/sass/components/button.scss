@@ -1,6 +1,7 @@
 .button {
     display: inline-block;
     padding: 1rem;
+    border: 0;
     border-radius: 1rem;
     color: var(--colour-secondary);
     text-decoration: none;
@@ -8,5 +9,6 @@
     
     &:hover {
         cursor: pointer;
+        text-decoration: underline;
     }
 }
