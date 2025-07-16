@@ -45,6 +45,23 @@ npx http-server
 
 Using [app.MapStaticAssets();](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/map-static-files?view=aspnetcore-9.0) causes the static files to have their file names modified to have a hash in it to improve caching - however this makes figuring out the file names during runtime difficult. So to figure out what files the service worker needs to cache, the static folder is scanned after it's built to create a JSON file of all the paths that need to be cached.
 
+#### Generating QR codes
+
+QR codes are generated at run time using an API like `/api/qrcodes/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj0wQkY2bmtkLUgtQQ`, the string at the end is a Base64Url encoded string because it's compatible with both URLs and file systems (whereas base64 produces forward slashes).
+
+You can link to an image like:
+
+```html
+<img alt="qr code" src="/api/qrcodes/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj0wQkY2bmtkLUgtQQ" />
+```
+
+To make it easier with generating the encoded string, there's a script:
+
+```bash
+> dotnet run ./Scripts/Base64UrlEncode.cs https://www.youtube.com/watch?v=0BF6nkd-H-A
+> aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj0wQkY2bmtkLUgtQQ
+```
+
 ### Releasing
 
 Create a release and versioned tag.
