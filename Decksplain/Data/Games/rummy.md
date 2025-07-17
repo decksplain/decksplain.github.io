@@ -2,6 +2,7 @@
 title: Rummy
 players: 2 - 6
 round-time: 15 - 30
+description: A classic card matching game where players form sets and runs of cards, aiming to be the first to use all their cards or have the lowest score.
 ---
 
 **Objective:** Be the first player to use all your cards or have the lowest points left in your hand

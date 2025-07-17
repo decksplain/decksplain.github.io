@@ -2,6 +2,7 @@
 title: Cabo Rush
 players: 2 - 4+
 round-time: 5
+description: A fast-paced memory card game where players aim to have the lowest total card value by remembering, swapping, and using special power cards strategically.
 ---
 
 **Objective:** End the game with the **lowest score**

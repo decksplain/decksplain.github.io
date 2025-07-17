@@ -2,6 +2,7 @@
 title: Mao
 players: 3 - 5+
 round-time: 5 - 15
+description: A unique card game where the rules are not explained at the start, and players must figure them out through trial and error as they play.
 ---
 
 **Objective:** ??

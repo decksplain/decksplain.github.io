@@ -1,0 +1,51 @@
+@use "../mixins";
+
+.compact-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+
+    @include mixins.print {
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+.compact-card {
+    background-color: var(--colour-secondary);
+    border-radius: 1rem;
+    border: 7px solid var(--colour-primary);
+    padding: 1rem;
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
+    text-decoration: none;
+
+    @include mixins.tablet {
+        width: calc(50% - 1rem);
+    }
+    
+    @include mixins.desktop {
+        width: calc(33.333% - 1rem);
+    }
+    
+    &:hover {
+        h3 {
+            text-decoration: underline;
+        }
+    }
+}
+
+.compact-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--colour-primary);
+}
+
+.compact-card-info {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--colour-primary);
+    opacity: 0.8;
+}

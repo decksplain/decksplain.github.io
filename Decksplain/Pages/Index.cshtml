@@ -7,11 +7,10 @@
 <section class="paragraph-centered">
     <p>Concise rule summaries for card decks, each game is designed to fit on a single card. Ideal for new players following along while an experienced player explains the rules in detail. Simple, clear, and always on hand.</p>
 </section>
-<section class="card-container">
+<section class="compact-card-container">
     @foreach (CardDto game in Model.Cards)
     {
-        @await Html.PartialAsync("~/Pages/Shared/CardFront.cshtml", game)
-        @await Html.PartialAsync("~/Pages/Shared/CardBack.cshtml", game)
+        @await Html.PartialAsync("~/Pages/Shared/CompactCard.cshtml", game)
     }
 </section>
 <section class="paragraph-centered">

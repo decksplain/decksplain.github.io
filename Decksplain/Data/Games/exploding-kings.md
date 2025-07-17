@@ -1,7 +1,8 @@
 ---
 title: Exploding Kings
-players: 2 - 5+<br/>
+players: 2 - 5+
 round-time: 10 - 20
+description: A tense card game inspired by Exploding Kittens where players draw cards while trying to avoid the Exploding Kings, using special cards to peek, skip, or defuse explosions.
 ---
 
 **Objective:** Don't pick up an Exploding King

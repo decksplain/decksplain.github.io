@@ -2,6 +2,7 @@
 title: Blackjack
 players: 2 - 10
 round-time: 5 - 10
+description: A classic casino card game where players aim to beat the dealer by getting a hand value of 21 or as close as possible without going over.
 ---
 
 **Objective:** Beat the dealer
@@ -45,3 +46,11 @@ round-time: 5 - 10
 
 - Standard win = 1x
 - Blackjack = 1.5x
+
+<!--split-->
+
+<img alt="QR Code to https://en.wikipedia.org/wiki/Blackjack" src="/api/qrcodes/aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQmxhY2tqYWNr" style="width: 5rem; float: right; margin: 0 0 1rem 1rem;">
+
+Based on the rules printed on Wikipedia:
+
+https://en.wikipedia.org/wiki/Blackjack

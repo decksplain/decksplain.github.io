@@ -33,6 +33,7 @@ public class CardFactory
             Title = gameModel.Title,
             Players = gameModel.Players,
             RoundTime = gameModel.RoundTime,
+            Description = gameModel.Description,
             FrontContent = contentSplit[0],
             BackContent = contentSplit.Length > 1 ? contentSplit[1] : null
         };

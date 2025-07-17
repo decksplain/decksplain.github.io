@@ -2,6 +2,7 @@
 title: Officer's Skat
 players: 2
 round-time: 10
+description: A two-player trick-taking card game derived from Skat, where players aim to win tricks and score points by playing the highest-valued cards.
 ---
 
 <!-- Rules from https://en.wikipedia.org/wiki/Officers%27_Skat -->
