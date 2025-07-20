@@ -1,6 +1,7 @@
-﻿#:property TargetFramework net10.0
+﻿#:property TargetFramework=net10.0
 
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 string staticRoute = $".{Path.DirectorySeparatorChar}";
 string[] ignoredPaths =
@@ -31,11 +32,7 @@ Manifest manifest = new()
     Assets = fileNames,
 };
 
-string json = JsonSerializer.Serialize(manifest, new JsonSerializerOptions
-{
-    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-    WriteIndented = true 
-});
+string json = JsonSerializer.Serialize(manifest, ManifestJsonContext.Default.Manifest);
 
 File.WriteAllText($"{staticRoute}asset-manifest.json", json);
 
@@ -45,3 +42,7 @@ public class Manifest
 
     public required IEnumerable<string> Assets { get; set; }
 }
+
+[JsonSerializable(typeof(Manifest))]
+[JsonSourceGenerationOptions(WriteIndented = true, PropertyNamingPolicy = JsonKnownNamingPolicy.CamelCase)]
+public partial class ManifestJsonContext : JsonSerializerContext;

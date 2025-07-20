@@ -1,4 +1,4 @@
-﻿FROM mcr.microsoft.com/dotnet/sdk:10.0.100-preview.4
+﻿FROM mcr.microsoft.com/dotnet/sdk:10.0.100-preview.6
 
 WORKDIR /app
 
