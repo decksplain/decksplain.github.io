@@ -19,6 +19,8 @@ public class IndexModel : LayoutModel
     
     public IActionResult OnGetAsync()
     {
+        Layout.Title = "Home";
+        
         Cards = _gamesRepository.GetGames()
             .Select(game => _cardFactory.CreateFromGame(game))
             .ToArray();

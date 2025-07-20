@@ -19,6 +19,8 @@ public class GamesModel : LayoutModel
     
     public IActionResult OnGetAsync()
     {
+        Layout.Title = "Games";
+        
         Cards = _gamesRepository.GetGames()
             .Select(game => _cardFactory.CreateFromGame(game))
             .ToArray();

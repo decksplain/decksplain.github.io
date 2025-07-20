@@ -32,6 +32,8 @@ public class PrintableModel : LayoutModel
         }
 
         CardDto = _cardFactory.CreateFromGame(game);
+        Layout.Title = $"Printable | {CardDto.Title} | Games";
+        Layout.IsPrint = true;
         
         return Page();
     }

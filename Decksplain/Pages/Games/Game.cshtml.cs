@@ -33,6 +33,7 @@ public class GameModel : LayoutModel
         }
 
         CardDto = _cardFactory.CreateFromGame(game);
+        Layout.Title = $"{CardDto.Title} | Games";
         
         return Page();
     }

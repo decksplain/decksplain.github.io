@@ -10,4 +10,5 @@ public class LayoutModel : PageModel
 public class Layout
 {
     public bool IsPrint { get; set; } = false;
+    public string? Title { get; set; } = null;
 }

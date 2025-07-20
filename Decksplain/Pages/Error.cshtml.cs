@@ -21,7 +21,7 @@ public class ErrorModel : LayoutModel
 
     public void OnGet()
     {
+        Layout.Title = "Error";
         RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
     }
 }
-

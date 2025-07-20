@@ -19,6 +19,9 @@ public class PrintableModel : LayoutModel
     
     public IActionResult OnGetAsync()
     {
+        Layout.Title = "Printable | Games";
+        Layout.IsPrint = true;
+        
         Cards = _gamesRepository.GetGames()
             .Select(game => _cardFactory.CreateFromGame(game))
             .ToArray();
