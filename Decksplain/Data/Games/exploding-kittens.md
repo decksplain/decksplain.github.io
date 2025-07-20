@@ -2,6 +2,7 @@
 title: Exploding Kittens
 players: 2 - 5+
 round-time: 10 - 20
+description: A popular strategic card game where players draw cards hoping to avoid the Exploding Kittens, using special action cards to peek at the deck, skip turns, or redirect the danger.
 ---
 
 **Objective:** Don't pick up an Exploding Kitten

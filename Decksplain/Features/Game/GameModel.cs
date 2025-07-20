@@ -17,6 +17,9 @@ public class GameModel : IContent
 
     [YamlMember(Alias = "round-time")]
     public required string RoundTime { get; set; }
+    
+    [YamlMember(Alias = "description")]
+    public string? Description { get; set; }
 
     public required string Content { get; set; }
 }

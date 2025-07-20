@@ -15,5 +15,7 @@
         src="@Model.QrCodeUrl"
         style="width: 5rem;"
     />
-    @Html.Raw(Model.FrontContent)
+    <div class="card-content">
+        @Html.Raw(Model.FrontContent)
+    </div>
 </section>

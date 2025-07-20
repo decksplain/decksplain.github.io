@@ -11,6 +11,8 @@ public record CardDto
     public required string Players { get; init; }
 
     public required string RoundTime { get; init; }
+    
+    public string? Description { get; init; }
 
     public required string FrontContent { get; init; }
     

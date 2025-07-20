@@ -2,6 +2,7 @@
 title: Mau Mau
 players: 2 - 5
 round-time: 5 - 10
+description: A popular European card game similar to Uno, where players race to discard all their cards by matching the previous card's suit or value.
 ---
 
 **Objective:** Get rid of your cards

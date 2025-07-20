@@ -22,7 +22,7 @@ public class CardFactory
             ?? throw new Exception("Unable to find game URL");
         string absoluteUrl = _baseUrlService.GetBaseUrl() + relativeUrl;
         byte[] urlBytes = System.Text.Encoding.UTF8.GetBytes(absoluteUrl);
-        string base64Url = Convert.ToBase64String(urlBytes);
+        string base64Url = System.Buffers.Text.Base64Url.EncodeToString(urlBytes);
         
         string[] contentSplit = gameModel.Content.Split("<!--split-->");
         
@@ -33,6 +33,7 @@ public class CardFactory
             Title = gameModel.Title,
             Players = gameModel.Players,
             RoundTime = gameModel.RoundTime,
+            Description = gameModel.Description,
             FrontContent = contentSplit[0],
             BackContent = contentSplit.Length > 1 ? contentSplit[1] : null
         };

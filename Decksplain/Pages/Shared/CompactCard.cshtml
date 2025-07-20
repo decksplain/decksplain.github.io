@@ -1,0 +1,13 @@
+@model Decksplain.Features.Card.CardDto
+<a href="@Model.RelativeUrl" class="compact-card">
+    <h3>@Model.Title</h3>
+    <div class="compact-card-info">
+        <span>@Html.Raw(Model.Players) players</span>
+        <span>•</span>
+        <span>@Html.Raw(Model.RoundTime) minutes</span>
+    </div>
+    @if (!string.IsNullOrEmpty(Model.Description))
+    {
+        <p>@Model.Description</p>
+    }
+</a>

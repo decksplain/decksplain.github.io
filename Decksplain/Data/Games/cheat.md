@@ -2,6 +2,7 @@
 title: Cheat / Bullshit / I Doubt It
 players: 2 - 4+
 round-time: 5 - 10
+description: A bluffing card game where players try to discard all their cards by playing them in sequence, with the option to lie about which cards they're playing.
 ---
 
 **Objective:** Get rid of your cards

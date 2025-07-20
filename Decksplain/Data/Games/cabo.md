@@ -2,6 +2,7 @@
 title: Cabo
 players: 2 - 4
 round-time: 5
+description: A strategic memory card game where players try to end with the lowest score by remembering and swapping cards, with special powers that can peek at or exchange cards.
 ---
 
 **Objective:** End the game with the **lowest score**

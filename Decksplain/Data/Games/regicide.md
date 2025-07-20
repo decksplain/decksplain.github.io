@@ -2,6 +2,7 @@
 title: Regicide
 players: 1 - 4
 round-time: 5 - 20
+description: A cooperative card game where players work together to defeat a series of powerful royal enemies using numbered cards and their special suit abilities.
 ---
 
 **Objective:** Kill the royal cards
@@ -40,7 +41,7 @@ round-time: 5 - 20
 
 <!--split-->
 
-<img alt="QR Code to https://www.regicidegame.com/how-to-play/" src="/api/qrcodes/aHR0cHM6Ly93d3cucmVnaWNpZGVnYW1lLmNvbS9ob3ctdG8tcGxheS8=" style="width: 5rem; float: right; margin: 0 0 1rem 1rem;">
+<img alt="QR Code to https://www.regicidegame.com/how-to-play/" src="/api/qrcodes/aHR0cHM6Ly93d3cucmVnaUNCaGVnYW1lLmNvbS9ob3ctdG8tcGxheS8=" style="width: 5rem; float: right; margin: 0 0 1rem 1rem;">
 
 More rules:
 
