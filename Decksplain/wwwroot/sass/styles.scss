@@ -84,6 +84,19 @@ ul, ol {
 }
 
 ul {
+    &.contains-task-list {
+        list-style: none;
+        
+        > li {
+            padding: 0;
+
+            &:before {
+                content: none;
+                margin: 0;
+            }
+        }
+    }
+    
     > li {
         &:before {
             content: '•';
