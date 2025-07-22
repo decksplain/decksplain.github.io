@@ -1,0 +1,29 @@
+﻿@page "/how-to-print"
+@using Decksplain.Extensions
+@model HowToPrintModel
+@{
+    Layout = "Shared/_Page";
+}
+<div class="how-to-page">
+    <section>
+        <h3>1. Print the cards</h3>
+        <p>Go to a printable page such as for <a href="@(Url.Page("/Games/Title/Printable", null, new { title = "Cabo Rush".Slugify() }) ?? throw new Exception("Cannot get how to print page"))">Cabo Rush</a> and print. Each card is designed to be poker card size (2.5" by 3.5" or 63.5mm by 88.9mm) so measure that you've printed to scale. Each card is also designed to have a front and a back, so consider printing the pages double sided (flip along the short edge if your printer supports that).</p>
+    </section>
+    <section>
+        <h3>2. Cut the cards</h3>
+        <img src="~/images/how-to-print/cut-the-paper.png" alt="How to Print" width="100%"/>
+        <p>Cut the cards out as best as you can. A pair of scissors will get the job done, but a guillotine is better.</p>
+    </section>
+    <section>
+        <h3>3. Round the corners</h3>
+        <p>Consider rounding the corners of the paper to make it look more professional.</p>
+    </section>
+    <section>
+        <h3>4. Sleeving the cards</h3>
+        <p>Consider putting the cards in a protector.</p>
+    </section>
+    <section>
+        <h3>5. Play the game</h3>
+        <p>Enjoy playing!</p>
+    </section>
+</div>
