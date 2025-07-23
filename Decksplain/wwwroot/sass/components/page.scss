@@ -4,10 +4,6 @@
     max-width: calc(1300px + 1rem);
     margin: auto;
     padding: 0 1rem;
-
-    @include mixins.desktop {
-        padding: 0;
-    }
 }
 
 // .page-header-container {
@@ -17,7 +13,7 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 
-    @include mixins.tablet {
+    @include mixins.desktop {
         display: flex;
         justify-content: space-between;
     }
@@ -40,7 +36,7 @@
         width: 100%;
         text-align: center;
 
-        @include mixins.tablet {
+        @include mixins.desktop {
             width: auto;
             text-align: left;
         }
@@ -49,7 +45,7 @@
     .logo {
         width: 3rem;
 
-        @include mixins.tablet {
+        @include mixins.desktop {
             float: left;
             margin-right: 0.5rem;
         }
@@ -58,7 +54,7 @@
     h1 {
         margin: 0.25rem 0;
 
-        @include mixins.tablet {
+        @include mixins.desktop {
             float: left;
         }
     }
@@ -69,7 +65,7 @@
         margin: 1rem 0;
         flex-direction: column;
 
-        @include mixins.tablet {
+        @include mixins.desktop {
             flex-direction: row;
             align-self: center;
             margin: 0 -0.25rem;
