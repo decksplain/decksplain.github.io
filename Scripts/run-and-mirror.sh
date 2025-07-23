@@ -28,7 +28,12 @@ wget \
 
 echo "Copying in missed static files..."
 cp ./Decksplain/wwwroot/service-worker.js ./static/service-worker.js
-cp ./Decksplain/wwwroot/images/logo-square.svg ./static/images/logo-square.svg
+cp ./Decksplain/wwwroot/images/icon.svg ./static/images/icon.svg
+cp ./Decksplain/wwwroot/images/icon-72.png ./static/images/icon-72.png
+cp ./Decksplain/wwwroot/images/icon-128.png ./static/images/icon-128.png
+cp ./Decksplain/wwwroot/images/icon-144.png ./static/images/icon-144.png
+cp ./Decksplain/wwwroot/images/icon-192.png ./static/images/icon-192.png
+cp ./Decksplain/wwwroot/images/icon-512.png ./static/images/icon-512.png
 
 echo "Restructure HTML files into folders with index.html (skip root index.html)..."
 cd static
