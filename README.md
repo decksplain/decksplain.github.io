@@ -2,7 +2,7 @@
 
 A series of classic and novel card game rules provided in a printable format.
 
-![img.png](./.github/images/index.png)
+![Home page](./.github/images/index.png)
 
 ## Development
 
