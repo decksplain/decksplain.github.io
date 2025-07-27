@@ -18,7 +18,7 @@ public class CardFactory
     
     public CardDto CreateFromGame(Game.GameModel gameModel)
     {
-        string relativeUrl = _linkGenerator.GetPathByPage("/Games/Game", null, new { title = gameModel.Title.Slugify() })
+        string relativeUrl = _linkGenerator.GetPathByAction("Index", "Game", new { title = gameModel.Title.Slugify() })
             ?? throw new Exception("Unable to find game URL");
         string absoluteUrl = _baseUrlService.GetBaseUrl() + relativeUrl;
         byte[] urlBytes = System.Text.Encoding.UTF8.GetBytes(absoluteUrl);

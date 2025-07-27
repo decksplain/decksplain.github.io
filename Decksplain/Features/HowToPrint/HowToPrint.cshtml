@@ -1,13 +1,12 @@
-﻿@page "/how-to-print"
-@using Decksplain.Extensions
-@model HowToPrintModel
+﻿@using Decksplain.Extensions
+@model Decksplain.Features.HowToPrint.HowToPrint
 @{
-    Layout = "Shared/_Page";
+    Layout = "~/Features/Page/Page.cshtml";
 }
 <div class="how-to-page">
     <section>
         <h3>1. Print the cards</h3>
-        <p>Go to a printable page such as for <a href="@(Url.Page("/Games/Title/Printable", null, new { title = "Cabo Rush".Slugify() }) ?? throw new Exception("Cannot get how to print page"))">Cabo Rush</a> and print. Each card is designed to be poker card size (2.5" by 3.5" or 63.5mm by 88.9mm) so measure that you've printed to scale. Each card is also designed to have a front and a back - consider printing the pages double sided (flip along the short edge if your printer supports that).</p>
+        <p>Go to a printable page such as for <a href="@(Url.Action("Printable", "Game", new { title = "Cabo Rush".Slugify() }) ?? throw new Exception("Cannot get how to print page"))">Cabo Rush</a> and print. Each card is designed to be poker card size (2.5" by 3.5" or 63.5mm by 88.9mm) so measure that you've printed to scale. Each card is also designed to have a front and a back - consider printing the pages double sided (flip along the short edge if your printer supports that).</p>
     </section>
     <section>
         <h3>2. Cut the cards</h3>
@@ -30,3 +29,4 @@
         <p>Enjoy playing!</p>
     </section>
 </div>
+

@@ -6,8 +6,10 @@ using Decksplain.Features.QrCode;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-builder.Services.AddRazorPages();
+builder.Services.AddMvc(options =>
+{
+    options.EnableEndpointRouting = false;
+});
 builder.Services.AddRouting(options =>
 {
     options.AppendTrailingSlash = true;
@@ -27,23 +29,39 @@ builder.Services.AddScoped<BaseUrlService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-
 app.UseRouting();
+app.UseStaticFiles();
 
 app.UseAuthorization();
 
-app.MapControllers();
-app.MapStaticAssets();
-app.MapRazorPages()
-   .WithStaticAssets();
+app.MapControllerRoute(
+    name: "game",
+    pattern: "games/{title}",
+    defaults: new { controller = "Game", action = "Index" }
+);
+app.MapControllerRoute(
+    name: "gamePrintable",
+    pattern: "games/{title}/printable",
+    defaults: new { controller = "GamePrintable", action = "Index" }
+);
+app.MapControllerRoute(
+    name: "games",
+    pattern: "games",
+    defaults: new { controller = "Games", action = "Index" }
+);
+app.MapControllerRoute(
+    name: "gamesPrintable",
+    pattern: "games/printable",
+    defaults: new { controller = "GamesPrintable", action = "Index" }
+);
+app.MapControllerRoute(
+    name: "howToPrint",
+    pattern: "how-to-print",
+    defaults: new { controller = "HowToPrint", action = "Index" }
+);
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Index}/{action=Index}"
+);
 
 app.Run();

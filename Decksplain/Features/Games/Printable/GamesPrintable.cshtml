@@ -1,9 +1,7 @@
-﻿@page
-@using Decksplain.Features.Card
-@model PrintableModel
+﻿@using Decksplain.Features.Card
+@model Decksplain.Features.Games.Printable.GamesPrintable
 @{
-    Layout = "Shared/_Layout";
-    Model.Layout.IsPrint = true;
+    Layout = "~/Features/Layout/Layout.cshtml";
 }
 @foreach (CardDto[] gamesChunk in Model.Cards.Chunk(6))
 {

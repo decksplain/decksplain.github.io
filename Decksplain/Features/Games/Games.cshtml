@@ -1,8 +1,7 @@
-﻿@page
-@using Decksplain.Features.Card
-@model GamesModel
+﻿@using Decksplain.Features.Card
+@model Decksplain.Features.Game.Games
 @{
-    Layout = "Shared/_Page";
+    Layout = "~/Features/Page/Page.cshtml";
 }
 <section class="card-container">
     @foreach (CardDto game in Model.Cards)
@@ -12,5 +11,5 @@
     }
 </section>
 <section class="paragraph-centered">
-    <a href="@(Url.Page("/Games/Printable") ?? throw new Exception("Cannot get printable games page"))" class="button">🖨️ Printable page</a>
+    <a href="@(Url.Action("Index", "GamesPrintable") ?? throw new Exception("Cannot get printable games page"))" class="button">🖨️ Printable page</a>
 </section>

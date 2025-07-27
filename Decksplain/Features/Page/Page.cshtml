@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "_Layout";
+    Layout = "~/Features/Layout/Layout.cshtml";
 }
 <header class="page-header-container">
     <div class="page-header page-container">
@@ -8,7 +8,7 @@
             <h1>Decksplain</h1>
         </a>
         <nav>
-            <a href="@(Url.Page("/HowToPrint") ?? throw new Exception("Cannot get how to print page"))">How to print</a>
+            <a href="@(Url.Action("Index", "HowToPrint") ?? throw new Exception("Cannot get how to print page"))">How to print</a>
             <a href="https://github.com/decksplain/decksplain.github.io">GitHub</a>
             <button class="button" style="display: none;" id="enable-offline">Enable offline cache</button>
             <button class="button" style="display: none;" id="disable-offline">Disable offline cache</button>

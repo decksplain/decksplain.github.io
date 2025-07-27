@@ -1,8 +1,7 @@
-﻿@page "/games/{title}"
-@using Decksplain.Extensions
-@model GameModel
+﻿@using Decksplain.Extensions
+@model Decksplain.Features.Game.Game
 @{
-    Layout = "Shared/_Page";
+    Layout = "~/Features/Page/Page.cshtml";
 }
 <section class="paragraph-centered">
     <p>@Model.CardDto.Description</p>
@@ -12,5 +11,5 @@
     @await Html.PartialAsync("~/Pages/Shared/CardBack.cshtml", Model.CardDto)
 </div>
 <section class="paragraph-centered">
-    <a href="@(Url.Page("/Games/Title/Printable", new { title = Model.CardDto.Title.Slugify() }) ?? throw new Exception("Cannot get printable game page"))" class="button">🖨️ Printable page</a>
+    <a href="@(Url.Action("Index", "GamePrintable", new { title = Model.CardDto.Title.Slugify() }) ?? throw new Exception("Cannot get printable games page"))" class="button">🖨️ Printable page</a>
 </section>

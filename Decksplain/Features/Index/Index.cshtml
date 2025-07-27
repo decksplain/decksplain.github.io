@@ -1,8 +1,7 @@
-﻿@page
-@using Decksplain.Features.Card
-@model IndexModel
+﻿@using Decksplain.Features.Card
+@model Decksplain.Features.Index.Index
 @{
-    Layout = "Shared/_Page";
+    Layout = "~/Features/Page/Page.cshtml";
 }
 <section class="paragraph-centered">
     <p>Concise rule summaries for card decks, each game is designed to fit on a single card. Ideal for new players following along while an experienced player explains the rules in detail. Simple, clear, and always on hand.</p>
@@ -14,5 +13,5 @@
     }
 </section>
 <section class="paragraph-centered">
-    <a href="@(Url.Page("/Games") ?? throw new Exception("Cannot get games page"))" class="button">View all games</a>
+    <a href="@(Url.Action("Index", "Games") ?? throw new Exception("Cannot get games page"))" class="button">View all games</a>
 </section>

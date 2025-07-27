@@ -1,7 +1,6 @@
-﻿@page "/games/{title}/printable"
-@model PrintableModel
+﻿@model Decksplain.Features.Game.Printable.GamePrintable
 @{
-    Layout = "Shared/_Layout";
+    Layout = "~/Features/Layout/Layout.cshtml";
     Model.Layout.IsPrint = true;
 }
 
