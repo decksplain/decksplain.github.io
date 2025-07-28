@@ -15,7 +15,6 @@ public class GamesPrintableController : Controller
         _cardFactory = cardFactory;
     }
     
-    [HttpGet("/games/printable")]
     public IActionResult Index()
     {
         var model = new GamesPrintable

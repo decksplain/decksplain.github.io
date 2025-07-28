@@ -35,6 +35,11 @@ app.UseStaticFiles();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "gamesPrintable",
+    pattern: "games/printable",
+    defaults: new { controller = "GamesPrintable", action = "Index" }
+);
+app.MapControllerRoute(
     name: "game",
     pattern: "games/{title}",
     defaults: new { controller = "Game", action = "Index" }
@@ -50,18 +55,14 @@ app.MapControllerRoute(
     defaults: new { controller = "Games", action = "Index" }
 );
 app.MapControllerRoute(
-    name: "gamesPrintable",
-    pattern: "games/printable",
-    defaults: new { controller = "GamesPrintable", action = "Index" }
-);
-app.MapControllerRoute(
     name: "howToPrint",
     pattern: "how-to-print",
     defaults: new { controller = "HowToPrint", action = "Index" }
 );
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Index}/{action=Index}"
+    pattern: "/",
+    defaults: new { controller = "Index", action = "Index" }
 );
 
 app.Run();

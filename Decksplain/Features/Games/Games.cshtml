@@ -6,8 +6,8 @@
 <section class="card-container">
     @foreach (CardDto game in Model.Cards)
     {
-        @await Html.PartialAsync("~/Pages/Shared/CardFront.cshtml", game)
-        @await Html.PartialAsync("~/Pages/Shared/CardBack.cshtml", game)
+        @await Html.PartialAsync("~/Features/Card/CardFront.cshtml", game)
+        @await Html.PartialAsync("~/Features/Card/CardBack.cshtml", game)
     }
 </section>
 <section class="paragraph-centered">

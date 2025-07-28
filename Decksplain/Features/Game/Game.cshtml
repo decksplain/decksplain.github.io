@@ -7,8 +7,8 @@
     <p>@Model.CardDto.Description</p>
 </section>
 <div class="card-container">
-    @await Html.PartialAsync("~/Pages/Shared/CardFront.cshtml", Model.CardDto)
-    @await Html.PartialAsync("~/Pages/Shared/CardBack.cshtml", Model.CardDto)
+    @await Html.PartialAsync("~/Features/Card/CardFront.cshtml", Model.CardDto)
+    @await Html.PartialAsync("~/Features/Card/CardBack.cshtml", Model.CardDto)
 </div>
 <section class="paragraph-centered">
     <a href="@(Url.Action("Index", "GamePrintable", new { title = Model.CardDto.Title.Slugify() }) ?? throw new Exception("Cannot get printable games page"))" class="button">🖨️ Printable page</a>
